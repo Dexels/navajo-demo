@@ -1,0 +1,55 @@
+<tml>
+    <message name="alias"/>
+    <message name="resources"/>
+    <message name="deployments">
+        <!-- Definitions for development environment -->
+        <message name="develop">
+            <message name="alias">
+                <property name="navajostore" value="sportlink"/>
+            </message>
+            <message name="resources">
+                <message name="authentication">
+                    <property name="type" value="mysql"/>
+                    <property name="url" value="jdbc:mysql://10.0.0.1/authentication"/>
+                    <property name="username" value="user"/>
+                    <property name="password" value="pass"/>
+                    <property name="refresh" type="float" value="0.01"/>
+                    <property name="min_connections" type="integer" value="1"/>
+                    <property name="max_connections" type="integer" value="100"/>
+                </message>
+                <message name="defaultmail">
+                    <property name="type" value="mail"/>
+                    <property name="host" value="mailtrap.io"/>
+                    <property name="port" value="25"/>
+                    <property name="username" value="someuser"/>
+                    <property name="password" value="sometoken"/>
+                    <property name="encrypt" value="false"/>
+                </message>
+            </message>
+        </message>
+        <message name="production">
+            <message name="alias">
+                <property name="navajostore" value="sportlink"/>
+            </message>
+            <message name="resources">
+                <message name="authentication">
+                    <property name="type" value="mysql"/>
+                    <property name="url" value="jdbc:mysql://10.0.0.1/productionsserver"/>
+                    <property name="username" value="user"/>
+                    <property name="password" value="pass"/>
+                    <property name="refresh" type="float" value="0.01"/>
+                    <property name="min_connections" type="integer" value="1"/>
+                    <property name="max_connections" type="integer" value="100"/>
+                </message>
+                <message name="defaultmail">
+                    <property name="type" value="mail"/>
+                    <property name="host" value="mail.smtp.server"/>
+                    <property name="port" value="25"/>
+                    <property name="username" value="someuser"/>
+                    <property name="password" value="sometoken"/>
+                    <property name="encrypt" value="false"/>
+                </message>
+            </message>
+        </message>
+    </message>
+</tml>

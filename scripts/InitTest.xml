@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tsl>
+    <map object="com.dexels.navajo.adapter.TokenizerMap">
+        <field name="delimiter">
+            <expression value="';'"/>
+        </field>
+        <field name="value">
+            <expression value="'AAP;NOOT;MIES'"/>
+        </field>  
+        <message name="pipo">
+            <map ref="tokens">
+                <property name="Token">
+                    <expression value="$value"/>
+                </property>
+            </map>
+        </message>     
+    </map>
+</tsl>

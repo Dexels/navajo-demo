@@ -1,0 +1,20 @@
+<workflow transient="true" onException="error">
+    <state id="init">
+       <transition trigger="navajo:matchreport/proxy/ProcessFinalizeMatchImplementation" condition="{request@.:[/MatchForm/Status] == 'CANCELED'}" nextstate="tweet">
+             <param name="WorkflowId">
+                <expression value="$WFId$" />
+             </param>
+             <param name="WorkflowName">
+                <expression value="'tweetdwffinalize'" />
+             </param>
+       </transition>
+    </state>
+    <state id="tweet">
+        <task service="matchreport/twitter/ProcessTweetFinalizedMatch" navajo="tweet:request"/>
+        <transition trigger="immediate" nextstate="null"/>
+    </state>
+    <state id="error">
+        <task service="auditlog/ProcessLogWorkflowError"/>
+        <transition trigger="immediate" nextstate="null"/>
+    </state>
+</workflow>
