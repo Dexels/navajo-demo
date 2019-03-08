@@ -8,12 +8,12 @@
                 <property name="navajostore" value="sportlink"/>
             </message>
             <message name="resources">
-                <message name="authentication">
-                    <property name="type" value="mysql"/>
-                    <property name="url" value="jdbc:mysql://10.0.0.1/authentication"/>
-                    <property name="username" value="user"/>
-                    <property name="password" value="pass"/>
-                    <property name="refresh" type="float" value="0.01"/>
+                <message name="dvdrental">
+                    <property name="type" value="postgresql"/>
+                    <property name="url" value="jdbc:postgresql://10.0.0.7:5432/dvdrental"/>
+                    <property name="port" value="5432"/>
+                    <property name="username" value="postgres"/>
+                    <property name="password" value="mysecretpassword"/>
                     <property name="min_connections" type="integer" value="1"/>
                     <property name="max_connections" type="integer" value="100"/>
                 </message>

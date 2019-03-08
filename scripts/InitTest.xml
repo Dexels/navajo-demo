@@ -5,7 +5,7 @@
             <expression value="';'"/>
         </field>
         <field name="value">
-            <expression value="'AAP;NOOT;MIES'"/>
+            <expression value="'AAP;NOOT;MIES;WIM'"/>
         </field>  
         <message name="pipo">
             <map ref="tokens">
