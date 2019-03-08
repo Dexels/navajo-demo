@@ -1,0 +1,5 @@
+sql(resource='dvdrental'
+	,debug=true
+	,query='select * from film')
+	->take(2)
+	->tml(messageName='Films', isArray=true)
