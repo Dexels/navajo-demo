@@ -1,5 +1,5 @@
 sql(resource='dvdrental'
 	,debug=true
 	,query='select * from film')
-	->take(2)
+	->take(100)
 	->tml(messageName='Films', isArray=true)
