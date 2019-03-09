@@ -34,7 +34,7 @@
 		</message>
 		<message name="description-provider">
 			<property name="class"
-				value="com.dexels.navajo.enterprise.adapter.descriptionprovider.FastDescriptionProvider"
+				value="com.dexels.navajo.enterprise.adapter.descriptionprovider.MongoDescriptionProvider"
 				direction="in" />
 		</message>
 		<message name="repository">
