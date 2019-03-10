@@ -10,7 +10,7 @@
             <message name="resources">
                 <message name="dvdrental">
                     <property name="type" value="postgresql"/>
-                    <property name="url" value="jdbc:postgresql://10.0.0.7:5432/dvdrental"/>
+                    <property name="url" value="jdbc:postgresql://postgres:5432/dvdrental"/>
                     <property name="port" value="5432"/>
                     <property name="username" value="postgres"/>
                     <property name="password" value="mysecretpassword"/>
