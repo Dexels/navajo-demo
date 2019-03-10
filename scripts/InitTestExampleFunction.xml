@@ -3,6 +3,6 @@
         <message name="Message">
 		<property name="Reversed" type="string">
 			<expression value="Reverse('abcdefg')"/>
-		</property
+		</property>
         </message>     
 </tsl>
