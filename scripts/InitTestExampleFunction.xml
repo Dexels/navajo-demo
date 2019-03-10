@@ -5,5 +5,4 @@
 			<expression value="Reverse('abcdefg')"/>
 		</property
         </message>     
-    </map>
 </tsl>
