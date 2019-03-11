@@ -6,6 +6,9 @@
 		<!-- <sqlquery.addParameter value="100" /> -->
 		<message name="Actors" type="array">
 			<sqlquery.resultSet>
+		<property name="Id" direction="out">
+			<expression value="$columnValue('actor_id')" />
+		</property>
 		<property name="FirstName" direction="out">
 			<expression value="$columnValue('first_name')" />
 		</property>

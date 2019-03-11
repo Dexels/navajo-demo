@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+    <operations>
+        <operation service="movie/ActorList" method="GET"/>
+    </operations>
+
+    <message name="PersonAnniversaries">
+        <property name="Id" type="string" key="true,id=search"/>
+        
+        <message name="Actor" type="array" method="response">
+            <message name="Actor" type="definition">
+                <property name="Id" type="string"/>
+                <property name="FirstName" type="string"/>
+                <property name="LastName" type="string"/>
+            </message>
+        </message>
+    </message>
+</navascript>
