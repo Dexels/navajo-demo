@@ -1,0 +1,7 @@
+<tml>
+  <message name="entities" type="array">
+    <message name="entities" type="array_element">
+      <property name="entity" value="ActorList" />
+    </message>
+  </message>
+</tml>
