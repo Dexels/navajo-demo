@@ -4,9 +4,7 @@
         <operation service="movie/ActorList" method="GET"/>
     </operations>
 
-    <message name="PersonAnniversaries">
-        <property name="Id" type="string" key="true,id=search"/>
-        
+    <message name="ActorList">
         <message name="Actor" type="array" method="response">
             <message name="Actor" type="definition">
                 <property name="Id" type="string"/>

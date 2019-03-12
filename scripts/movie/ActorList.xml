@@ -1,22 +1,24 @@
 <navascript>
-	<map.sqlquery datasource="'dvdrental'">
-		<sqlquery.query xml:space="preserve">
+	<message name="ActorList">
+		<map.sqlquery datasource="'dvdrental'">
+			<sqlquery.query xml:space="preserve">
                 SELECT * FROM   actor
             	</sqlquery.query>
-		<!-- <sqlquery.addParameter value="100" /> -->
-		<message name="Actors" type="array">
-			<sqlquery.resultSet>
-		<property name="Id" direction="out">
-			<expression value="$columnValue('actor_id')" />
-		</property>
-		<property name="FirstName" direction="out">
-			<expression value="$columnValue('first_name')" />
-		</property>
-		<property name="LastName" direction="out">
-			<expression value="$columnValue('last_name')" />
-		</property>
+			<!-- <sqlquery.addParameter value="100" /> -->
+			<message name="Actor" type="array">
+				<sqlquery.resultSet>
+					<property name="Id" direction="out">
+						<expression value="$columnValue('actor_id')" />
+					</property>
+					<property name="FirstName" direction="out">
+						<expression value="$columnValue('first_name')" />
+					</property>
+					<property name="LastName" direction="out">
+						<expression value="$columnValue('last_name')" />
+					</property>
 
-			</sqlquery.resultSet>
+				</sqlquery.resultSet>
 			</message>
-	</map.sqlquery>
+		</map.sqlquery>
+	</message>
 </navascript>

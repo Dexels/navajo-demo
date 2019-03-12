@@ -1,0 +1,19 @@
+<navascript>
+	<map.sqlquery datasource="'dvdrental'">
+		<sqlquery.query xml:space="preserve">
+                SELECT * FROM actor where actor_id = ?
+            	</sqlquery.query>
+		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
+		<message name="Actor">
+			<property name="Id" direction="out">
+				<expression value="$columnValue('actor_id')" />
+			</property>
+			<property name="FirstName" direction="out">
+				<expression value="$columnValue('first_name')" />
+			</property>
+			<property name="LastName" direction="out">
+				<expression value="$columnValue('last_name')" />
+			</property>
+		</message>
+	</map.sqlquery>
+</navascript>

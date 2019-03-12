@@ -1,0 +1,22 @@
+<navascript>
+	<map.sqlquery datasource="'dvdrental'">
+		<sqlquery.update xml:space="preserve">
+                DELETE FROM film_actor where actor_id = ?;
+                DELETE FROM actor where actor_id = ?;
+        </sqlquery.update>
+		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
+		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
+		<sqlquery.doUpdate/>
+		<message name="Actor">
+			<property name="Id" direction="out">
+				<expression value="null" />
+			</property>
+			<property name="FirstName" direction="out">
+				<expression value="null" />
+			</property>
+			<property name="LastName" direction="out">
+				<expression value="null" />
+			</property>
+		</message>
+	</map.sqlquery>
+</navascript>
