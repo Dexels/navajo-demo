@@ -4,6 +4,7 @@ jobs:
     machine:
       image: circleci/classic:edge
     steps:
+      - checkout
       - run: |
           docker --version
           docker login -u $DOCKER_USER -p $DOCKER_PASS
