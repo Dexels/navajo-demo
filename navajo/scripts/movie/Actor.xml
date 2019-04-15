@@ -2,7 +2,7 @@
 	<map.sqlquery datasource="'dvdrental'">
 		<sqlquery.query xml:space="preserve">
                 SELECT * FROM actor where actor_id = ?
-            	</sqlquery.query>
+         </sqlquery.query>
 		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
 		<message name="Actor">
 			<property name="Id" direction="out">

@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - run: |
+          docker --version
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: |
+          pwd
+          cd ~/repo
+          ls -l
+          docker build -t dexels/dexels-base:$TAG -t dexels/dexels-base:latest temp
+          docker push dexels/dexels-base:$TAG
+          docker push dexels/dexels-base:latest
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
