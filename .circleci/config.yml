@@ -10,11 +10,11 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run: |
           pwd
-          cd ~/repo
           ls -l
-          docker build -t dexels/dexels-base:$TAG -t dexels/dexels-base:latest temp
-          docker push dexels/dexels-base:$TAG
-          docker push dexels/dexels-base:latest
+          export TAG=0.1
+          docker build -t dexels/navajo.example:$TAG -t dexels/navajo.example:latest .
+          docker push dexels/navajo.example:$TAG
+          docker push dexels/navajo.example:latest
 workflows:
   version: 2
   workflow:
