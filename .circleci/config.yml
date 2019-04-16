@@ -13,13 +13,11 @@ jobs:
           ls -l
           MINORTAG=0.1
           IMAGE=dexels/navajo.example
-          BASEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-platform?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')
-          TAG=${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}
-          
+          BASEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-platform?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')          
           BASETAG=${MINORTAG}.$BASEBUILDNR
-          echo "Tagging for: ${TAG}  dexels/navajo.example:${BASETAG} passing version: ${BASETAG}"
-          docker build . --build-arg VERSION=${BASETAG} -t dexels/navajo.example:$BASETAG -t dexels/navajo.example:latest
-          docker push dexels/navajo.example:$TAG
+          echo "Tagging for: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}  dexels/navajo.example:${BASETAG} onto super: ${BASETAG}"
+          docker build . --build-arg VERSION=${BASETAG} -t ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} -t ${IMAGE}:latest
+          docker push dexels/navajo.example:${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}
           docker push dexels/navajo.example:latest
 workflows:
   version: 2
