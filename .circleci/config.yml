@@ -17,8 +17,8 @@ jobs:
           BASETAG=${MINORTAG}.$BASEBUILDNR
           echo "Tagging for: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}  dexels/navajo.example:${BASETAG} onto super: ${BASETAG}"
           docker build . --build-arg VERSION=${BASETAG} -t ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} -t ${IMAGE}:latest
-          docker push dexels/navajo.example:${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}
-          docker push dexels/navajo.example:latest
+          docker push ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}
+          docker push ${IMAGE}:latest
 workflows:
   version: 2
   workflow:
