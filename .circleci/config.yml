@@ -16,7 +16,7 @@ jobs:
           BASETAG=${MINORTAG}.$BASEBUILDNR
           echo "Tagging for: ${TAG} and basetag ${BASETAG}"
           echo "Tagging navajo:  dexels/navajo.example:$BASEBUILDNR and version param ${BASBASEBUILDNRETAG}"
-          docker build . --build-arg VERSION=${BASEBUILDNR} -t dexels/navajo.example:$BASETAG -t dexels/navajo.example:latest
+          docker build . --build-arg VERSION=${BASETAG} -t dexels/navajo.example:$BASETAG -t dexels/navajo.example:latest
           docker push dexels/navajo.example:$BASEBUILDNR
           docker push dexels/navajo.example:latest
 workflows:
