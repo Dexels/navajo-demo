@@ -1,4 +1,4 @@
-ARG VERSION=0.1.148
+ARG VERSION=0.0.0
 FROM dexels/navajo:$VERSION
 MAINTAINER Frank Lyaruu
 ADD navajo navajo/
