@@ -2,7 +2,7 @@ ARG VERSION=0.0.0
 FROM dexels/navajo:$VERSION
 MAINTAINER Frank Lyaruu
 #RUN groupadd -r navajouser -g 433
-RUN useradd -u 431 -r -g navajouser -d /home/navajouser -s /sbin/nologin -c "Docker image user" navajouser
+#RUN useradd -u 431 -r -g navajouser -d /home/navajouser -s /sbin/nologin -c "Docker image user" navajouser
 USER navajouser
 COPY --chown=navajouser.navajouser ./navajo /storage/repositories/navajo
 ENV FILE_REPOSITORY_PATH=/storage/repositories/navajo/
