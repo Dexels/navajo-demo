@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tml>
     <message name="deployments">
-        <!-- Definitions for development environment -->
-        <message name="develop">
-            <message name="resources">
-                <message name="default">
-                    <property name="type" value="oracle"/>
-                    <property name="url" value="jdbc:oracle:thin:@10.0.0.1:1521:AARDBEI"/>
-                    <property name="username" value="jbnkern"/>
-                    <property name="password" value="jbn"/>
-                    <property name="refresh" type="float" value="0.01"/>
-                    <property name="min_connections" type="integer" value="1"/>
-                    <property name="max_connections" type="integer" value="100"/>
-                </message>
-            </message>
-        </message>
 
-        <!-- Definitions for production environment -->
-        <message name="production">
-            <message name="resources">
-                <message name="default">
-                    <property name="type" value="oracle"/>
-                    <property name="url" value="jdbc:oracle:thin:@zeus4.sportlink-infra.net:1521:SLPROD04"/>
-                    <property name="username" value="jbnkern"/>
-                    <property name="password" value="jbn"/>
-                    <property name="refresh" type="float" value="0.1"/>
-                    <property name="min_connections" type="integer" value="1"/>
-                    <property name="max_connections" type="integer" value="100"/>
-                </message>
-            </message>
-        </message>
     </message>
 </tml>
