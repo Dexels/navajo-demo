@@ -2,7 +2,7 @@
 	<message name="ActorList">
 		<map.sqlquery datasource="'dvdrental'">
 			<sqlquery.query xml:space="preserve">
-                SELECT * FROM actor
+                SELECT * FROM film
 			</sqlquery.query>
 			<message name="Film" type="array">
 				<sqlquery.resultSet>
