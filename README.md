@@ -68,6 +68,11 @@ That will open a script that queries a list of fake films.
 
 (You can check with cluster are running using 'docker-compose ps', or check 'docker ps' for individual containers)
 
+### Connecting to the Postgres database
+
+Open a connection to localhost:5432
+Username: postgres Password: mysecretpassword
+
 ### Editing / rebuilding.
 
 Try editing / adding scripts in navajo/scripts.
