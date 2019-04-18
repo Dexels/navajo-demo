@@ -36,10 +36,16 @@ services:
      - HAZELCAST_SIMPLE=true
      - FILE_REPOSITORY_DEPLOYMENT=develop
 ```
+It defines two containers, one called postgres and one called navajo. The postgres container exposes the standard postgres port at 5432, and navajo
+exposes port 8181.
 
+```
+%> docker-compose up
+```
+Will start both containers and after a while both should be up.
 
-docker-compose up
-browse naar:
-localhost:8181/tester.html
+then open a browse to:
+http://localhost:8181/tester.html
 username: admin password: admin
 
+In the tester login with any username / password 

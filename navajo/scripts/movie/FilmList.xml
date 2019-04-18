@@ -1,0 +1,22 @@
+<navascript>
+	<message name="ActorList">
+		<map.sqlquery datasource="'dvdrental'">
+			<sqlquery.query xml:space="preserve">
+                SELECT * FROM actor
+			</sqlquery.query>
+			<message name="Film" type="array">
+				<sqlquery.resultSet>
+					<property name="Id" direction="out">
+						<expression value="$columnValue('film_id')" />
+					</property>
+					<property name="Title" direction="out">
+						<expression value="$columnValue('title')" />
+					</property>
+					<property name="Description" direction="out">
+						<expression value="$columnValue('desciption')" />
+					</property>
+				</sqlquery.resultSet>
+			</message>
+		</map.sqlquery>
+	</message>
+</navascript>
