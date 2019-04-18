@@ -87,3 +87,6 @@ And bring it back up:
 ```
 docker-compose up
 ```
+
+For more about docker / docker-compose, there is very nice documentation available at
+https://docs.docker.com/get-started/
