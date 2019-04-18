@@ -1,20 +1,16 @@
 version: '2'
 services:
   postgres:
-    image: dexels/dvdrental:0.1.5
+    image: dexels/dvdrental:1
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
-  mongo:
-    image: mongo:latest
-    environment:
-      - MONGO_DATA_DIR=/data/db
-    ports:
-      - 27017:27017
-    command: mongod --smallfiles # --quiet
   navajo:
-    image: dexels/navajo-demo:1
+    build:
+      context: .
+      args:
+        VERSION: 0.1.249
     ports:
       - "8181:8181"
     environment:
