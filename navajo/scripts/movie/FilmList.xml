@@ -13,7 +13,7 @@
 						<expression value="$columnValue('title')" />
 					</property>
 					<property name="Description" direction="out">
-						<expression value="$columnValue('desciption')" />
+						<expression value="$columnValue('description')" />
 					</property>
 				</sqlquery.resultSet>
 			</message>
