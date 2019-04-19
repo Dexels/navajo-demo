@@ -71,7 +71,9 @@ That will open a script that queries a list of fake films.
 ### Connecting to the Postgres database
 
 Open a connection to localhost:5432 using your favorite database access tool (e.g. DbVisualiser)
+
 Username: postgres 
+
 Password: mysecretpassword
 
 ### Editing / rebuilding.
