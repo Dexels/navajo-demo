@@ -25,6 +25,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          apk update && apk add curl curl-dev bash
           curl --version
           sudo apt-get install jq
           curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
