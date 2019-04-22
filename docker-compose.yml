@@ -1,4 +1,4 @@
-version: '2'
+version: '2.2'
 services:
   postgres:
     image: dexels/dvdrental:1

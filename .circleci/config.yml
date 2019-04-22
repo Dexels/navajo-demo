@@ -19,8 +19,23 @@ jobs:
           docker build . --build-arg VERSION=${BASETAG} -t ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} -t ${IMAGE}:latest
           docker push ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}
           docker push ${IMAGE}:latest
+  test:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - checkout
+      - run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker-compose up -d
+          sleep 10
+          FIRSTACTOR=$('curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
+          echo "FirstActor: $FIRSTACTOR"
+          
 workflows:
   version: 2
   workflow:
     jobs:
       - build
+      - test:
+          requires:
+            - build

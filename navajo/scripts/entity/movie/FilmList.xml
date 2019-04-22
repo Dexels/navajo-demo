@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+    <operations>
+        <operation service="sql" method="GET"/>
+    </operations>
+
+    <message name="FilmList">
+        <message name="Film" type="array" method="response">
+            <message name="Film" type="definition">
+                <property name="Title" type="string"/>
+            </message>
+        </message>
+    </message>
+</navascript>
