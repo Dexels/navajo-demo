@@ -25,6 +25,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          sudo apt-get install jq
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
           sleep 10
