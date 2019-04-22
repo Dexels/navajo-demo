@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run: |
           curl --version
-          sudo apt-get install jq
+          sudo apt-get -y install jq
           curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
