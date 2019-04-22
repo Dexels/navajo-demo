@@ -26,7 +26,10 @@ jobs:
       - checkout
       - run: |
           curl --version
-          apt-get -y install jq
+          JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest"
+          curl --silent --show-error --location --fail --retry 3 --output /usr/bin/jq $JQ_URL
+          chmod +x /usr/bin/jq
+          jq --version
           curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
