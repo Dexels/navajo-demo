@@ -34,7 +34,9 @@ jobs:
           ./jq --version
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
+          echo "Compose completed"
           sleep 100
+          echo "Sleep completed"
           curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList"
           echo "second, pipe to jq:"
           curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList" | ./jq
