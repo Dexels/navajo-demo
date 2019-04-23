@@ -40,7 +40,7 @@ jobs:
           curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
           echo "second, pipe to jq:"
           curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | ./jq
-          FIRSTACTOR=$('curl --retry 10 --retry-delay 5 -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
+          FIRSTACTOR=$(curl --retry 10 --retry-delay 5 -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq -r .Actor[0].LastName)
           echo "FirstActor: $FIRSTACTOR"
           
 workflows:
