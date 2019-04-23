@@ -25,12 +25,16 @@ jobs:
     steps:
       - checkout
       - run: |
+          echo 'current dir: '
+          pwd
           curl --version
           JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest"
-          curl --silent --show-error --location --fail --retry 3 --output /usr/bin/jq $JQ_URL
-          chmod +x /usr/bin/jq
-          jq --version
+          curl --silent --show-error --location --fail --retry 3 --output ./jq $JQ_URL
+          chmod +x ./jq
+          ./jq --version
           curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
+          echo "second, pipe to jq:"
+          curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | ./jq
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
           sleep 10
