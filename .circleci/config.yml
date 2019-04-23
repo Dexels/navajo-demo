@@ -32,13 +32,13 @@ jobs:
           curl --show-error --location --fail --retry 3 --output ./jq $JQ_URL
           chmod +x ./jq
           ./jq --version
-          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
-          echo "second, pipe to jq:"
-          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | ./jq
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
-          sleep 10
-          FIRSTACTOR=$('curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
+          sleep 100
+          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList"
+          echo "second, pipe to jq:"
+          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList" | ./jq
+          FIRSTACTOR=$('curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
           echo "FirstActor: $FIRSTACTOR"
           
 workflows:
