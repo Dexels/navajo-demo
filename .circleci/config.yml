@@ -37,10 +37,10 @@ jobs:
           echo "Compose completed"
           sleep 100
           echo "Sleep completed"
-          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList"
+          curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
           echo "second, pipe to jq:"
-          curl -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList" | ./jq
-          FIRSTACTOR=$('curl -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://navajo:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
+          curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | ./jq
+          FIRSTACTOR=$('curl --retry 10 --retry-delay 5 -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq .Actor[0].LastName')
           echo "FirstActor: $FIRSTACTOR"
           
 workflows:
