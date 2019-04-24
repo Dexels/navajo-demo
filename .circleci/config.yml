@@ -34,7 +34,7 @@ jobs:
           docker network ls
           docker ps
           sleep 100
-          docker run -e URL=http://navajo:8181 --network navajoexample_default dexels/navajo.example.test:latest
+          docker run -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
           
 workflows:
   version: 2
