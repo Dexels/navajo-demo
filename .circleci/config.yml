@@ -25,15 +25,8 @@ jobs:
     steps:
       - checkout
       - run: |
-          echo 'current dir: '
-          JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest"
-          curl --show-error --location --fail --retry 3 --output ./jq $JQ_URL
-          chmod +x ./jq
-          ./jq --version
           docker-compose up -d
-          docker network ls
-          docker ps
-          sleep 100
+          sleep 25
           docker run -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
           
 workflows:
