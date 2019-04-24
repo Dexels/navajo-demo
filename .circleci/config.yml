@@ -31,6 +31,8 @@ jobs:
           chmod +x ./jq
           ./jq --version
           docker-compose up -d
+          docker network ls
+          docker ps
           sleep 100
           docker run -e URL=http://navajo:8181 --network navajoexample_default dexels/navajo.example.test:latest
           

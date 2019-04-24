@@ -10,7 +10,7 @@ services:
     build:
       context: .
       args:
-        VERSION: 0.1.249
+        VERSION: latest
     ports:
       - "8181:8181"
     environment:
