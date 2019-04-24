@@ -26,22 +26,13 @@ jobs:
       - checkout
       - run: |
           echo 'current dir: '
-          pwd
-          curl --version
           JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest"
           curl --show-error --location --fail --retry 3 --output ./jq $JQ_URL
           chmod +x ./jq
           ./jq --version
-          docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker-compose up -d
-          echo "Compose completed"
           sleep 100
-          echo "Sleep completed"
-          curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList"
-          echo "second, pipe to jq:"
-          curl --retry 10 --retry-delay 5 -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | ./jq
-          FIRSTACTOR=$(curl --retry 10 --retry-delay 5 -s -XGET -H "Authorization: Basic YTph" -H "X-Navajo-Instance: Tenant1" -H "Accept: application/json" -H "X-Navajo-Version: 0" "http://localhost:8181/entity/movie/ActorList" | jq -r .Actor[0].LastName)
-          echo "FirstActor: $FIRSTACTOR"
+          docker run -e URL=http://navajo:8181 --network navajoexample_default dexels/navajo.example.test:latest
           
 workflows:
   version: 2
