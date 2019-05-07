@@ -17,3 +17,7 @@ services:
      - CLUSTER=demo
      - HAZELCAST_SIMPLE=true
      - FILE_REPOSITORY_DEPLOYMENT=develop
+  mongodemo:
+    image: debezium/example-mongodb:latest
+    ports:
+      - "27017:27017"
