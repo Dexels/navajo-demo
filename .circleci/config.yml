@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run: |
           docker-compose up -d
-          sleep 45
+          sleep 60
           docker run -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
           
 workflows:
