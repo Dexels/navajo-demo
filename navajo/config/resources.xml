@@ -17,6 +17,18 @@
                     <property name="min_connections" type="integer" value="1"/>
                     <property name="max_connections" type="integer" value="100"/>
                 </message>
+                <message name="mongostore">
+                    <property name="type" value="mongodb"/>
+                    <property name="host" value="mongodemo"/>
+                    <property name="port" type="integer" value="27017"/>
+                    <property name="database" value="mongotest"/>
+                </message>
+                <message name="sharedstore">
+                    <property name="type" value="mongodb"/>
+                    <property name="host" value="mongodemo"/>
+                    <property name="port" type="integer" value="27017"/>
+                    <property name="database" value="mongotest"/>
+                </message>
                 <message name="defaultmail">
                     <property name="type" value="mail"/>
                     <property name="host" value="mailtrap.io"/>
