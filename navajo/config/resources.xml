@@ -27,7 +27,13 @@
                     <property name="type" value="mongodb"/>
                     <property name="host" value="mongodemo"/>
                     <property name="port" type="integer" value="27017"/>
-                    <property name="database" value="mongotest"/>
+                    <property name="database" value="sharedstore"/>
+                </message>
+                <message name="sharedstore">
+                    <property name="type" value="mongodb"/>
+                    <property name="host" value="mongodemo"/>
+                    <property name="port" type="integer" value="27017"/>
+                    <property name="database" value="accessstore"/>
                 </message>
                 <message name="defaultmail">
                     <property name="type" value="mail"/>
