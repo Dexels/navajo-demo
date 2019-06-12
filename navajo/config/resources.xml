@@ -29,7 +29,7 @@
                     <property name="port" type="integer" value="27017"/>
                     <property name="database" value="sharedstore"/>
                 </message>
-                <message name="sharedstore">
+                <message name="accessstore">
                     <property name="type" value="mongodb"/>
                     <property name="host" value="mongodemo"/>
                     <property name="port" type="integer" value="27017"/>
