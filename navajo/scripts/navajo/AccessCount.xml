@@ -1,0 +1,15 @@
+<navascript>
+    <map.mongo_query datasource="'accessstore'" collection="'navajo.finished'" messageName="'Application'" multiple="true">
+        <mongo_query.query>
+            <value>
+                '{}'
+            </value>
+        </mongo_query.query>
+        <mongo_query.doQuery />
+        <message name="Result">
+            <property name="Count" type="selection" direction="out">
+                <expression value="$count"/>
+            </property>
+        </message>
+    </map.mongo_query>
+</navascript>
