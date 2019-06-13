@@ -60,6 +60,18 @@ Now we can call Navajo scripts by clicking on the script tree on the left.
 For example, open movie / ActorList
 That will open a script that queries a list of fake films.
 
+Additionally, you can inspect the OSGi web console. This web endpoint gives deep insight in the state of the system, it can be an invaluable tool to troubleshoot the system.
+For example, the 'bundles' tab shows all active OSGi bundles (An OSGi bundle is essentially a jar file with some extra metadata). An OSGi bundle specifies precisely what java packages it publishes to other bundles and which packages it needs from other bundles. This adds some complexity to building those bundles, as the dependencies between bundles have to be specific and precise.
+This can be very helpful though, as the OSGi framework will try to resolve all those dependencies when starting up (or when the system changes at runtime), and can precisely tell you when there is a problem, before you can a runtime error.
+Effectively that means that you can check the bundles tab to see if there are bundles that could not be resolved, typically those show up as bundles that do not have the state 'Active' or 'Fragment'. 
+If a bundle is unresolved, it also won't publish it's own package, so generally when there is one unresolved bundle, all bundles depending on that bundle will also be unresolved.
+You can use this interface to figure out what the root-cause is of this class path issue.
+
+For more in-depth information on how to use the OSGi web console I refer to the Felix project:
+
+https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html
+
+
 ### Shutting down
 
 ```
