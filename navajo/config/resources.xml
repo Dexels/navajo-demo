@@ -4,9 +4,7 @@
     <message name="deployments">
         <!-- Definitions for development environment -->
         <message name="develop">
-            <message name="alias">
-                <property name="navajostore" value="sportlink"/>
-            </message>
+            <message name="alias"/>
             <message name="resources">
                 <message name="dvdrental">
                     <property name="type" value="postgresql"/>
