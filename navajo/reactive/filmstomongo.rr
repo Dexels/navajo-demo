@@ -1,5 +1,5 @@
 sql(resource='dvdrental'
 	,debug=true
-	,query='select * from film')
+	,query='select film_id,title,description,length from film')
 	->mongoinsert(resource='mongostore',collection='filmz',buffer=10)
 	->tml(messageName='Films', isArray=true)
