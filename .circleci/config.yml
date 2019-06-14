@@ -26,9 +26,11 @@ jobs:
       - checkout
       - run: |
           docker-compose up -d
-          sleep 80
+          sleep 60
           docker run -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
-          
+      - store_test_results: 
+            # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: /surefire-reports          
 workflows:
   version: 2
   workflow:
