@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow transient="true" onException="error">
+    
+    <!-- When a trigger needs to exist for other unions too, then add in those files as well -->
+    
+    <state id="init">
+        <transition trigger="time:*|*|*|*|*" abortonerror="true" nextstate="transferrequests" />
+    </state>
+    
+    <!-- The action states -->
+    <state id="transferrequests">
+        <transition trigger="immediate" nextstate="exit" />
+        <task service="movie/FilmList" />
+    </state>
+
+    <!-- Finalizing -->
+    <state id="error">
+        <transition trigger="immediate" nextstate="null" />
+    </state>
+    <state id="exit">
+        <transition trigger="immediate" nextstate="null"/>
+    </state>
+</workflow>
