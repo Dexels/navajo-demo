@@ -5,15 +5,19 @@
          </sqlquery.query>
 		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
 		<message name="Actor">
-			<property name="Id" direction="out">
+			<property name="Id" direction="in">
 				<expression value="$columnValue('actor_id')" />
 			</property>
-			<property name="FirstName" direction="out">
+			<property name="FirstName" direction="in">
 				<expression value="$columnValue('first_name')" />
 			</property>
-			<property name="LastName" direction="out">
+			<property name="LastName" direction="in">
 				<expression value="$columnValue('last_name')" />
 			</property>
 		</message>
 	</map.sqlquery>
+    <methods>
+        <method name="movie/UpdateActor"/>
+        <method name="movie/DeleteActor"/>
+    </methods>
 </navascript>

@@ -1,4 +1,4 @@
-<navascript>
+<navascript debug="true">
 	<message name="ActorList">
 		<map.sqlquery datasource="'dvdrental'">
 			<sqlquery.query xml:space="preserve">
