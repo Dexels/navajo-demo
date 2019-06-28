@@ -17,6 +17,8 @@ services:
      - CLUSTER=demo
      - HAZELCAST_SIMPLE=true
      - FILE_REPOSITORY_DEPLOYMENT=develop
+     - LOGAPPENDERS=out,stdout
+     - TENANT_MASTER=Tenant1
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8181/status || exit 1"]
       interval: 1m00s
