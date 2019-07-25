@@ -1,4 +1,5 @@
 <navascript>
+	<!--  TODO: limit resultset? -->
     <map.mongo_query datasource="'accessstore'" collection="'navajo.finished'" messageName="'Application'" multiple="true">
         <mongo_query.query>
             <value>
