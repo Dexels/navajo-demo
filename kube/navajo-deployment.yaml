@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: navajo
+  name: navajo
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: navajo
+    spec:
+      containers:
+      - env:
+        - name: CLUSTER
+          value: demo
+        - name: FILE_REPOSITORY_DEPLOYMENT
+          value: develop
+        - name: HAZELCAST_SIMPLE
+          value: "true"
+        - name: LOGAPPENDERS
+          value: out,stdout
+        - name: TENANT_MASTER
+          value: Tenant1
+        image: dexels/navajo.example:3.3.371
+        livenessProbe:
+          exec:
+            command:
+            - curl -f http://localhost:8181/status || exit 1
+          failureThreshold: 3
+          periodSeconds: 60
+          timeoutSeconds: 10
+        name: navajo
+        ports:
+        - containerPort: 8181
+        resources: {}
+      restartPolicy: Always
+status: {}
