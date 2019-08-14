@@ -11,7 +11,7 @@ jobs:
       - run: |
           pwd
           ls -l
-          MINORTAG=3.3
+          MINORTAG=3.4
           IMAGE=dexels/navajo.example
           BASEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')          
           BASETAG=${MINORTAG}.$BASEBUILDNR
