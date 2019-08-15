@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  gcp-gke: circleci/gcp-gke@0.2.0
 jobs:
   build:
     machine:
@@ -11,9 +13,6 @@ jobs:
       - run: |
           pwd
           ls -l
-          MINORTAG=3.4
-          NAVAJOMINORTAG=3.3
-          IMAGE=dexels/navajo.example
           BASEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')          
           BASETAG=${NAVAJOMINORTAG}.$BASEBUILDNR
           echo "Tagging for: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM}  dexels/navajo.example:${BASETAG} onto super: ${BASETAG}"
@@ -36,7 +35,20 @@ jobs:
           docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
       - store_test_results: 
             # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-          path: surefire-reports          
+          path: surefire-reports
+  deploy:
+    description: Deploy application to Google Kubernetes Engine
+    machine: true
+    steps:
+      # Install `gcloud` and `kubectl` if not already installed.
+      - gcp-gke/install
+      # Initialize the `gcloud` CLI.
+      - gcp-gke/init
+      # Update a deployment Docker image.
+      - gcp-gke/rollout-image:
+          deployment: navajo
+          container: navajo
+          image: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} # change version when updating
 workflows:
   version: 2
   workflow:
@@ -45,3 +57,6 @@ workflows:
       - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test

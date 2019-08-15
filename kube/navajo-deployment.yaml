@@ -29,7 +29,7 @@ spec:
           value: out,stdout
         - name: TENANT_MASTER
           value: Tenant1
-        image: dexels/navajo.example:3.3.378
+        image: dexels/navajo.example:3.4.391
         livenessProbe:
           exec:
             command:
