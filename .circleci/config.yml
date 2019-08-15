@@ -40,7 +40,8 @@ jobs:
     description: Deploy application to Google Kubernetes Engine
     machine: true
     steps:
-      # Install `gcloud` and `kubectl` if not already installed.
+      - run: |
+          export NAVAJOEXAMPLEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo.example?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
       - gcp-gke/install
       # Initialize the `gcloud` CLI.
       - gcp-gke/init
@@ -49,7 +50,7 @@ jobs:
           deployment: navajo
           container: navajo
           cluster: standard-cluster-1 
-          image: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} # change version when updating
+          image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR} # change version when updating
 workflows:
   version: 2
   workflow:
