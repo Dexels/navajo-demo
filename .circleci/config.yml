@@ -48,6 +48,7 @@ jobs:
       - gcp-gke/rollout-image:
           deployment: navajo
           container: navajo
+          cluster: standard-cluster-1 
           image: ${IMAGE}:${MINORTAG}.${CIRCLE_BUILD_NUM} # change version when updating
 workflows:
   version: 2
