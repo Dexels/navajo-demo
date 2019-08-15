@@ -43,6 +43,7 @@ jobs:
       - run: |
           export NAVAJOEXAMPLEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo.example?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
           echo "Navajo Build nr: ${NAVAJOEXAMPLEBUILDNR}"
+          echo "export NAVAJOEXAMPLEBUILDNR=$NAVAJOEXAMPLEBUILDNR" >> $BASH_ENV
           echo "Image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR}"
       - gcp-gke/install
       # Initialize the `gcloud` CLI.
