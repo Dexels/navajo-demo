@@ -31,12 +31,17 @@ spec:
           value: Tenant1
         image: dexels/navajo.example:3.4.391
         livenessProbe:
-          exec:
-            command:
-            - curl -f http://localhost:8181/status || exit 1
-          failureThreshold: 3
-          periodSeconds: 60
-          timeoutSeconds: 10
+          httpGet:
+            path: /status
+            port: 8181
+          initialDelaySeconds: 60
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /status
+            port: 8181
+          initialDelaySeconds: 60
+          periodSeconds: 5
         name: navajo
         ports:
         - containerPort: 8181

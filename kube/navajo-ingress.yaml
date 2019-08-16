@@ -5,6 +5,10 @@ metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "navajo-static-ip"
 spec:
+  tls:
+  - hosts:
+    - kube.sendrato.com
+  - secretName: sendratocrt
   backend:
-    serviceName: navajo 
-    servicePort: 8181
+    serviceName: navajo
+    servicePort: 8182
