@@ -13,7 +13,7 @@ jobs:
       - run: |
           pwd
           ls -l
-	  ./build.sh
+          ./build.sh
   test:
     machine:
       image: circleci/classic:edge
