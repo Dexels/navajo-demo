@@ -10,7 +10,7 @@ services:
     build:
       context: .
       args:
-        VERSION: latest
+        VERSION: ${VERSION}
     ports:
       - "8181:8181"
     environment:
@@ -19,6 +19,8 @@ services:
      - FILE_REPOSITORY_DEPLOYMENT=develop
      - LOGAPPENDERS=out,stdout
      - TENANT_MASTER=Tenant1
+     - CONSOLE_USER=admin
+     - CONSOLE_PASS={sha-256}jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8181/status || exit 1"]
       interval: 1m00s
