@@ -43,15 +43,13 @@ jobs:
           echo "Navajo Build nr: ${NAVAJOEXAMPLEBUILDNR}"
           echo "export NAVAJOEXAMPLEBUILDNR=$NAVAJOEXAMPLEBUILDNR" >> $BASH_ENV
           echo "Image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR}"
-      - gcp-gke/install
-      # Initialize the `gcloud` CLI.
-      - gcp-gke/init
-      # Update a deployment Docker image.
-      - gcp-gke/rollout-image:
-          deployment: navajo
-          container: navajo
-          cluster: standard-cluster-1
-          image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR} # change version when updating
+#      - gcp-gke/install
+#      - gcp-gke/init
+#      - gcp-gke/rollout-image:
+#          deployment: navajo
+#          container: navajo
+#          cluster: standard-cluster-1
+#          image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR} # change version when updating
 workflows:
   version: 2
   workflow:
