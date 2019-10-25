@@ -1,4 +1,4 @@
-single()
+|>single()
 	->set(aap=1,bleb='blob')
 	->mongoinsert(resource='mongostore',collection='filmz',buffer=10)
 	->tml(messageName='Films', isArray=true)

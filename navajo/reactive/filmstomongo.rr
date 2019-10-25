@@ -1,4 +1,4 @@
-sql(resource='dvdrental'
+|>sql(resource='dvdrental'
 	,debug=true
 	,query='select film_id,title,description,length from film')
 	->mongoinsert(resource='mongostore',collection='filmz',buffer=10)

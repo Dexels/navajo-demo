@@ -1,4 +1,4 @@
-sql(resource='dvdrental'
+|>sql(resource='dvdrental'
 	,debug=true
 	,query='select * from film')
 	->take(50)
