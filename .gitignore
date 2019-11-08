@@ -1,3 +1,4 @@
 classes
 surefire-reports
 /bin/
+.DS_Store

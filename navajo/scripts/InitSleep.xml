@@ -1,7 +1,7 @@
 <navascript>
     <message name="HelloData">
         <property name="Greeting2" direction="out">
-            <expression value="Wait(60000)" />
+            <expression value="Wait(600000)" />
         </property>
 
     </message>
