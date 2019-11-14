@@ -19,6 +19,7 @@ services:
      - FILE_REPOSITORY_DEPLOYMENT=develop
      - LOGAPPENDERS=out,stdout
      - TENANT_MASTER=Tenant1
+     - NAVAJO_REQUEST_TIMEOUT=5000
      - CONSOLE_USER=admin
      - CONSOLE_PASS={sha-256}jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=
     healthcheck:
