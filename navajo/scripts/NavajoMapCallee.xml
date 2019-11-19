@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple callee function for the NavajoMap example. Is called twice by the caller. -->
+
+<tsl>
+    <message name="Response">
+        <property name="ValueOut" type="integer" direction="out">
+            <expression value="ToInteger([/Request/ValueIn]) + 2"/>
+        </property>
+    </message>     
+</tsl>

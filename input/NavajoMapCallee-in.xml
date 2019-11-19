@@ -1,0 +1,3 @@
+<message name="Request">
+    <property name="ValueIn" value="42" />
+</message>

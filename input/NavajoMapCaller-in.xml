@@ -1,0 +1,3 @@
+<message name="IndirectRequest">
+    <property name="IndirectValueIn" value="42" />
+</message>
