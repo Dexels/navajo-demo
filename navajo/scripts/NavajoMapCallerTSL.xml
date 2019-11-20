@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple caller function for the NavajoMap example. Calls the callee twice. -->
+
+<tsl>
+
+  <message name="IndirectResponse" type="array">
+
+        <map object="com.dexels.navajo.adapter.NavajoMap">
+            <field name="propertyName">
+                <expression value="'/Request/ValueIn'"/>
+            </field>
+            
+            <field name="property">
+                <expression value="ToInteger([/IndirectRequest/IndirectValueIn]) + 1"/>
+            </field>
+    
+            <field name="doSend">
+                <expression value="'NavajoMapCallee'"/>
+            </field>
+    
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 2"/>
+                </property>
+            </message>
+            
+            <field name="property">
+                <expression value="ToInteger([/IndirectRequest/IndirectValueIn]) + 3"/>
+            </field>
+    
+            <field name="doSend">
+                <expression value="'NavajoMapCallee'"/>
+            </field>
+    
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 4"/>
+                </property>
+            </message>
+        </map>
+
+    </message>
+
+</tsl>

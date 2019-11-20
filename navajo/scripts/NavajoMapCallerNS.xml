@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple caller function for the NavajoMap example. Calls the callee twice. -->
+
+<navascript>
+
+    <message name="IndirectResponse" type="array">
+
+        <map.navajomap>
+            <map.createproperty name="'/Request/ValueIn'" value="ToInteger([/IndirectRequest/IndirectValueIn]) + 1"/>
+            <map.callwebservice name="'NavajoMapCallee'"/>
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 2"/>
+                </property>
+            </message>
+    
+            <map.createproperty name="'/Request/ValueIn'" value="ToInteger([/IndirectRequest/IndirectValueIn]) + 3"/>
+            <map.callwebservice name="'NavajoMapCallee'"/>
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 4"/>
+                </property>
+            </message>    
+        </map.navajomap>
+
+    </message>
+
+</navascript>

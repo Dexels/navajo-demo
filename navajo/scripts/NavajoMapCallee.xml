@@ -5,7 +5,7 @@
 <tsl>
     <message name="Response">
         <property name="ValueOut" type="integer" direction="out">
-            <expression value="ToInteger([/Request/ValueIn]) + 2"/>
+            <expression value="ToInteger([/Request/ValueIn]) + 1"/>
         </property>
     </message>     
 </tsl>
