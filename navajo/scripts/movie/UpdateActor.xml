@@ -1,22 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navascript>
-	<map.sqlquery datasource="'dvdrental'">
-		<sqlquery.update xml:space="preserve">
-                UPDATE actor set first_name = ?, last_name = ?, last_update=NOW() where actor_id = ?;
+
+    <map.sqlquery datasource="'dvdrental'">
+        <sqlquery.update xml:space="preserve">
+            UPDATE actor
+            SET first_name = ?,
+                last_name = ?,
+                last_update = NOW()
+            WHERE actor_id = ?;
         </sqlquery.update>
-		<sqlquery.addParameter value="[/Actor/FirstName]" />
-		<sqlquery.addParameter value="[/Actor/LastName]" />
-		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
-		<sqlquery.doUpdate/>
-		<message name="Actor">
-			<property name="Id" direction="out">
-				<expression value="[/Actor/Id]" />
-			</property>
-			<property name="FirstName" direction="out">
-				<expression value="[/Actor/FirstName]" />
-			</property>
-			<property name="LastName" direction="out">
-				<expression value="[/Actor/LastName]" />
-			</property>
-		</message>
-	</map.sqlquery>
+        <sqlquery.addParameter value="[/Actor/FirstName]" />
+        <sqlquery.addParameter value="[/Actor/LastName]" />
+        <sqlquery.addParameter value="ToInteger([/Actor/Id])" />
+        <sqlquery.doUpdate/>
+
+        <message name="Actor">
+            <property name="Id" type="integer" direction="out" description="Internal actor identifier">
+                <expression value="[/Actor/Id]" />
+            </property>
+            <property name="FirstName" type="string" direction="in" description="First name">
+                <expression value="[/Actor/FirstName]" />
+            </property>
+            <property name="LastName" type="string" direction="in" description="Last name">
+                <expression value="[/Actor/LastName]" />
+            </property>
+        </message>
+    </map.sqlquery>
+
+    <methods>
+        <method name="movie/Actor" />
+        <method name="movie/DeleteActor" />
+        <method name="movie/UpdateActor"/>
+    </methods>
+
 </navascript>

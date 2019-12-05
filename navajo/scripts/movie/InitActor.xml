@@ -1,9 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navascript>
+
     <message name="Actor">
-        <property name="Id" direction="in" type="integer"/>
+        <property name="Id" type="integer" direction="in" description="Internal actor identifier" />
     </message>
+
     <methods>
-        <method name="movie/Actor"/>
-        <method name="movie/DeleteActor"/>
+        <method name="movie/Actor" />
+        <method name="movie/DeleteActor" />
     </methods>
+
 </navascript>

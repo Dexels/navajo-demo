@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+
+    <message name="Film">
+        <property name="Id" type="integer" direction="in" description="Internal film identifier" />
+    </message>
+
+    <methods>
+        <method name="movie/DeleteFilm" />
+        <method name="movie/Film" />
+    </methods>
+
+</navascript>

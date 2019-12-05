@@ -1,23 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navascript>
-	<map.sqlquery datasource="'dvdrental'">
-		<sqlquery.query xml:space="preserve">
-                SELECT * FROM actor where actor_id = ?
-         </sqlquery.query>
-		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
-		<message name="Actor">
-			<property name="Id" direction="in">
-				<expression value="$columnValue('actor_id')" />
-			</property>
-			<property name="FirstName" direction="in">
-				<expression value="$columnValue('first_name')" />
-			</property>
-			<property name="LastName" direction="in">
-				<expression value="$columnValue('last_name')" />
-			</property>
-		</message>
-	</map.sqlquery>
+
+    <map.sqlquery datasource="'dvdrental'">
+        <sqlquery.query xml:space="preserve">
+            SELECT *
+            FROM actor
+            WHERE actor_id = ?
+        </sqlquery.query>
+        <sqlquery.addParameter value="ToInteger([/Actor/Id])" />
+
+        <message name="Actor">
+            <property name="Id" type="integer" direction="out" description="Internal actor identifier">
+                <expression value="$columnValue('actor_id')" />
+            </property>
+            <property name="FirstName" type="string" direction="in" description="First name">
+                <expression value="$columnValue('first_name')" />
+            </property>
+            <property name="LastName" type="string" direction="in" description="Last name">
+                <expression value="$columnValue('last_name')" />
+            </property>
+        </message>
+    </map.sqlquery>
+
     <methods>
         <method name="movie/UpdateActor"/>
         <method name="movie/DeleteActor"/>
     </methods>
+
 </navascript>

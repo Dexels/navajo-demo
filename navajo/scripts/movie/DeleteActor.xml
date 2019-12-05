@@ -1,22 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navascript>
-	<map.sqlquery datasource="'dvdrental'">
-		<sqlquery.update xml:space="preserve">
-                DELETE FROM film_actor where actor_id = ?;
-                DELETE FROM actor where actor_id = ?;
+
+    <param name="ActorId" type="integer">
+        <expression value="ToInteger([/Actor/Id])" />
+    </param>
+
+    <map.sqlquery datasource="'dvdrental'">
+        <sqlquery.update xml:space="preserve">
+            DELETE FROM film_actor
+            WHERE actor_id = ?;
+            DELETE FROM actor
+            WHERE actor_id = ?;
         </sqlquery.update>
-		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
-		<sqlquery.addParameter value="ToInteger([/Actor/Id])" />
-		<sqlquery.doUpdate/>
-		<message name="Actor">
-			<property name="Id" direction="out">
-				<expression value="null" />
-			</property>
-			<property name="FirstName" direction="out">
-				<expression value="null" />
-			</property>
-			<property name="LastName" direction="out">
-				<expression value="null" />
-			</property>
-		</message>
-	</map.sqlquery>
+        <sqlquery.addParameter value="[@ActorId]" />
+        <sqlquery.addParameter value="[@ActorId]" />
+        <sqlquery.doUpdate/>
+
+        <message name="Deleted">
+            <property name="Id" type="integer" direction="out" description="Internal actor identifier">
+                <expression value="[@ActorId]" />
+            </property>
+            <property name="Count" type="integer" direction="out" description="Number of rows deleted">
+                <expression value="$updateCount" />
+            </property>
+        </message>
+    </map.sqlquery>
+
 </navascript>

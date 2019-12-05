@@ -1,22 +1,29 @@
 <navascript debug="true">
-	<message name="ActorList">
-		<map.sqlquery datasource="'dvdrental'">
-			<sqlquery.query xml:space="preserve">
-                SELECT * FROM film
-			</sqlquery.query>
-			<message name="Film" type="array">
-				<sqlquery.resultSet>
-					<property name="Id" direction="out">
-						<expression value="$columnValue('film_id')" />
-					</property>
-					<property name="Title" direction="out">
-						<expression value="$columnValue('title')" />
-					</property>
-					<property name="Description" direction="out">
-						<expression value="$columnValue('description')" />
-					</property>
-				</sqlquery.resultSet>
-			</message>
-		</map.sqlquery>
-	</message>
+
+    <message name="FilmList">
+        <map.sqlquery datasource="'dvdrental'">
+            <sqlquery.query xml:space="preserve">
+                SELECT *
+                FROM film
+            </sqlquery.query>
+
+            <message name="Film" type="array">
+                <sqlquery.resultSet>
+                    <property name="Id" type="integer" direction="out" description="Internal film identifier">
+                        <expression value="$columnValue('film_id')" />
+                    </property>
+                    <property name="Title" type="string" direction="out" description="Full title">
+                        <expression value="$columnValue('title')" />
+                    </property>
+                    <property name="ReleaseYear" type="integer" direction="out" description="Year of first release">
+                        <expression value="$columnValue('release_year')" />
+                    </property>                    
+                    <property name="Description" type="string" direction="out" description="Short description">
+                        <expression value="$columnValue('description')" />
+                    </property>
+                </sqlquery.resultSet>
+            </message>
+        </map.sqlquery>
+    </message>
+
 </navascript>
