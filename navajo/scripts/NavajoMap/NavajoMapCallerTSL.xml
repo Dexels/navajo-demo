@@ -4,11 +4,15 @@
 
 <tsl>
 
-  <message name="IndirectResponse" type="array">
+    <message name="IndirectResponse" type="array">
 
         <map object="com.dexels.navajo.adapter.NavajoMap">
             <field name="propertyName">
                 <expression value="'/Request/ValueIn'"/>
+            </field>
+            
+            <field name="propertyType">
+                <expression value="'integer'"/>
             </field>
             
             <field name="property">
@@ -16,7 +20,7 @@
             </field>
     
             <field name="doSend">
-                <expression value="'NavajoMapCallee'"/>
+                <expression value="'NavajoMap/NavajoMapCallee'"/>
             </field>
     
             <message name="IndirectResponse">
@@ -24,13 +28,23 @@
                     <expression value="$property('/Response/ValueOut') + 2"/>
                 </property>
             </message>
+        </map>
+            
+        <map object="com.dexels.navajo.adapter.NavajoMap">
+            <field name="propertyName">
+                <expression value="'/Request/ValueIn'"/>
+            </field>
+            
+            <field name="propertyType">
+                <expression value="'integer'"/>
+            </field>
             
             <field name="property">
                 <expression value="ToInteger([/IndirectRequest/IndirectValueIn]) + 3"/>
             </field>
     
             <field name="doSend">
-                <expression value="'NavajoMapCallee'"/>
+                <expression value="'NavajoMap/NavajoMapCallee'"/>
             </field>
     
             <message name="IndirectResponse">
@@ -41,5 +55,9 @@
         </map>
 
     </message>
+
+    <methods>
+        <method name="NavajoMap/InitNavajoMapCaller"/>
+    </methods>
 
 </tsl>

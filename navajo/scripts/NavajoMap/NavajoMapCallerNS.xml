@@ -8,15 +8,17 @@
 
         <map.navajomap>
             <map.createproperty name="'/Request/ValueIn'" value="ToInteger([/IndirectRequest/IndirectValueIn]) + 1"/>
-            <map.callwebservice name="'NavajoMapCallee'"/>
+            <map.callwebservice name="'NavajoMap/NavajoMapCallee'"/>
             <message name="IndirectResponse">
                 <property name="IndirectValueOut" type="integer" direction="out">
                     <expression value="$property('/Response/ValueOut') + 2"/>
                 </property>
             </message>
+        </map.navajomap>
     
+        <map.navajomap>
             <map.createproperty name="'/Request/ValueIn'" value="ToInteger([/IndirectRequest/IndirectValueIn]) + 3"/>
-            <map.callwebservice name="'NavajoMapCallee'"/>
+            <map.callwebservice name="'NavajoMap/NavajoMapCallee'"/>
             <message name="IndirectResponse">
                 <property name="IndirectValueOut" type="integer" direction="out">
                     <expression value="$property('/Response/ValueOut') + 4"/>
@@ -25,5 +27,9 @@
         </map.navajomap>
 
     </message>
+
+    <methods>
+        <method name="NavajoMap/InitNavajoMapCaller"/>
+    </methods>
 
 </navascript>
