@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navascript>
+
 	<operations>
 		<operation service="movie/Actor" method="GET" />
 		<operation service="movie/DeleteActor" method="DELETE" />
@@ -7,8 +8,9 @@
 	</operations>
 
 	<message name="Actor">
-		<property name="Id" type="string" key="true,id=search" />
-		<property name="FirstName" type="string" />
-		<property name="LastName" type="string" />
+		<property name="Id" type="string" key="true,id=search" description="Internal actor identifier" />
+		<property name="FirstName" type="string" description="First name" />
+		<property name="LastName" type="string" description="Last name" />
 	</message>
+
 </navascript>

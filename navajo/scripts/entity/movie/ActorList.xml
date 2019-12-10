@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navascript>
+
     <operations>
-        <operation service="movie/ActorList" method="GET"/>
+        <operation service="movie/ActorList" method="GET" />
     </operations>
 
     <message name="ActorList">
         <message name="Actor" type="array" method="response">
             <message name="Actor" type="definition">
-                <property name="Id" type="string"/>
-                <property name="FirstName" type="string"/>
-                <property name="LastName" type="string"/>
+                <property name="Id" type="string" description="Internal actor identifier" />
+                <property name="FirstName" type="string" description="First name" />
+                <property name="LastName" type="string" description="Last name" />
             </message>
         </message>
     </message>
+
 </navascript>

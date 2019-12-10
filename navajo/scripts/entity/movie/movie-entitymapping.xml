@@ -1,13 +1,21 @@
 <tml>
   <message name="entities" type="array">
-    <message name="entities" type="array_element">
-      <property name="entity" value="movie/ActorList" />
-    </message>
-    <message name="entities" type="array_element">
-      <property name="entity" value="movie/FilmList" />
-    </message>
+
     <message name="entities" type="array_element">
       <property name="entity" value="movie/Actor" />
     </message>
+  
+    <message name="entities" type="array_element">
+      <property name="entity" value="movie/ActorList" />
+    </message>
+
+    <message name="entities" type="array_element">
+      <property name="entity" value="movie/Film" />
+    </message>
+
+    <message name="entities" type="array_element">
+      <property name="entity" value="movie/FilmList" />
+    </message>
+
   </message>
 </tml>

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navascript>
+
     <operations>
-        <operation service="sql" method="GET"/>
+        <operation service="movie/FilmList" method="GET"/>
     </operations>
 
     <message name="FilmList">
         <message name="Film" type="array" method="response">
             <message name="Film" type="definition">
-                <property name="Title" type="string"/>
+                <property name="Id" type="integer" description="Internal film identifier" />    
+                <property name="Title" type="string" description="Full title" />
+                <property name="ReleaseYear" type="integer" description="Year of first release" />
             </message>
         </message>
     </message>
+
 </navascript>

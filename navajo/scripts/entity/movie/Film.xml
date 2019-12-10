@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+
+	<operations>
+		<operation service="movie/Film" method="GET" />
+		<operation service="movie/DeleteFilm" method="DELETE" />
+		<operation service="movie/UpdateFilm" method="PUT" />
+	</operations>
+
+	<message name="Film">
+		<property name="Id" type="integer" key="true,id=search" description="Internal film identifier" />
+        <property name="Title" type="string" description="Full title" />
+        <property name="ReleaseYear" type="integer" description="Year of first release" />
+	</message>
+
+</navascript>
