@@ -1,11 +1,13 @@
 version: '3'
 services:
+
   postgres:
     image: dexels/dvdrental:1
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+
   navajo:
     build:
       context: .
@@ -32,3 +34,13 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+
+  kafka:
+    image: spotify/kafka:latest
+    ports:
+      - "2181:2181"
+      - "9092:9092"
+    environment:
+      ADVERTISED_HOST: localhost
+      ADVERTISED_PORT: 9092
+
