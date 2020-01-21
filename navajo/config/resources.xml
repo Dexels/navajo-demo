@@ -41,6 +41,20 @@
                     <property name="password" value="sometoken"/>
                     <property name="encrypt" value="false"/>
                 </message>
+                <message name="kafkatopicsubscriber">
+                    <property name="type" value="kafkatopicsubscriber"/>
+                    <property name="wait" value="1000"/>
+                    <property name="max" value="1"/>
+                    <property name="commitStyle" value="async"/>
+                    <property name="hosts" value="localhost:9092"/>
+                </message>
+                <message name="kafkatopicpublisher">
+                    <property name="type" value="kafkatopicpublisher"/>
+                    <property name="compression" value="lz4"/>
+                    <property name="retries" value="20"/>
+                    <property name="replicationFactor" value="2"/>
+                    <property name="hosts" value="localhost:9092"/>
+                </message>
             </message>
         </message>
     </message>
