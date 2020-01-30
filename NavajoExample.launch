@@ -35,13 +35,13 @@
 <mapEntry key="FILE_REPOSITORY_PATH" value="${project_loc:navajo.example}/navajo"/>
 <mapEntry key="FILE_REPOSITORY_TYPE" value="multitenant"/>
 <mapEntry key="HAZELCAST_SIMPLE" value="true"/>
-<mapEntry key="HOSTIP" value="127.0.0.1"/>
 <mapEntry key="INSTANCENAME" value="instance-1"/>
 <mapEntry key="LOG_ALL_KAFKA" value="true"/>
+<mapEntry key="NAVAJO_REQUEST_TIMEOUT" value="5000"/>
 <mapEntry key="NO_DBREPLICATION" value="true"/>
 <mapEntry key="NO_DBTRIGGER" value="true"/>
 <mapEntry key="REPLICATION_MESSAGE_FORMAT" value="PROTOBUF"/>
-<mapEntry key="TENANT_MASTER" value="wildcard"/>
+<mapEntry key="TENANT_MASTER" value="Tenant1"/>
 </mapAttribute>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -50,9 +50,9 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/AdoptOpenJDK 8 [1.8.0_232]"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl en_US -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os}&#10;-ws ${target.ws}&#10;-arch ${target.arch}&#10;-nl en_US&#10;-console"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.osgi.service.http.port=9090 -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Xmx800M -Djava.awt.headless=true -Dorg.osgi.framework.startlevel.beginning=1 -Dcom.sun.management.jmxremote -Dnavajo.inject.mbeanserver -Dorg.osgi.framework.system.packages.extra=sun.misc -Dfile.encoding=UTF-8"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.sun.management.jmxremote&#10;-Declipse.ignoreApp=true&#10;-Djava.awt.headless=true&#10;-Dnavajo.inject.mbeanserver&#10;-Dorg.osgi.framework.startlevel.beginning=1&#10;-Dorg.osgi.framework.system.packages.extra=sun.misc&#10;-Dorg.osgi.service.http.port=9090&#10;-Dosgi.noShutdown=true&#10;-Dfile.encoding=UTF-8&#10;-Xmx800M"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:navajo.example/navajo}"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <booleanAttribute key="show_selected_only" value="false"/>
