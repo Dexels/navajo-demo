@@ -28,7 +28,7 @@
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
 <mapEntry key="CLUSTER" value="development_${env_var:USER}${env_var:USERNAME}"/>
 <mapEntry key="DEBUG_SCRIPTS" value="true"/>
-<mapEntry key="DEVELOP_MODE" value="false"/>
+<mapEntry key="DEVELOP_MODE" value="true"/>
 <mapEntry key="FILE_REPOSITORY_DEPLOYMENT" value="develop"/>
 <mapEntry key="FILE_REPOSITORY_FILEINSTALL" value="config"/>
 <mapEntry key="FILE_REPOSITORY_MONITORED" value="scripts,config,resources"/>
