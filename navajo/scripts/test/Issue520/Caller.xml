@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+    <map.testcaller count="5000">
+        <map.call service="'test/Issue520/Callee'" />
+    </map.testcaller>
+</navascript>
