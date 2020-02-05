@@ -28,7 +28,7 @@
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
 <mapEntry key="CLUSTER" value="development_${env_var:USER}${env_var:USERNAME}"/>
 <mapEntry key="DEBUG_SCRIPTS" value="true"/>
-<mapEntry key="DEVELOP_MODE" value="true"/>
+<mapEntry key="DEVELOP_MODE" value="false"/>
 <mapEntry key="FILE_REPOSITORY_DEPLOYMENT" value="develop"/>
 <mapEntry key="FILE_REPOSITORY_FILEINSTALL" value="config"/>
 <mapEntry key="FILE_REPOSITORY_MONITORED" value="scripts,config,resources"/>
@@ -37,7 +37,7 @@
 <mapEntry key="HAZELCAST_SIMPLE" value="true"/>
 <mapEntry key="INSTANCENAME" value="instance-1"/>
 <mapEntry key="LOG_ALL_KAFKA" value="true"/>
-<mapEntry key="NAVAJO_REQUEST_TIMEOUT" value="5000"/>
+<mapEntry key="NAVAJO_REQUEST_TIMEOUT" value="7000"/>
 <mapEntry key="NO_DBREPLICATION" value="true"/>
 <mapEntry key="NO_DBTRIGGER" value="true"/>
 <mapEntry key="REPLICATION_MESSAGE_FORMAT" value="PROTOBUF"/>
