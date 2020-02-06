@@ -18,6 +18,7 @@
 <booleanAttribute key="default" value="true"/>
 <booleanAttribute key="default_auto_start" value="true"/>
 <intAttribute key="default_start_level" value="5"/>
+<setAttribute key="deselected_workspace_bundles"/>
 <booleanAttribute key="includeOptional" value="false"/>
 <stringAttribute key="karaf_boot_features" value=""/>
 <booleanAttribute key="karaf_features_management" value="true"/>
@@ -52,13 +53,204 @@
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/AdoptOpenJDK 8 [1.8.0_232]"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os}&#10;-ws ${target.ws}&#10;-arch ${target.arch}&#10;-nl en_US&#10;-console"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.sun.management.jmxremote&#10;-Declipse.ignoreApp=true&#10;-Djava.awt.headless=true&#10;-Dnavajo.inject.mbeanserver&#10;-Dorg.osgi.framework.startlevel.beginning=1&#10;-Dorg.osgi.framework.system.packages.extra=sun.misc&#10;-Dorg.osgi.service.http.port=9090&#10;-Dosgi.noShutdown=true&#10;-Dfile.encoding=UTF-8&#10;-Xmx800M"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.sun.management.jmxremote&#10;-Declipse.ignoreApp=true&#10;-Djava.awt.headless=true&#10;-Dnavajo.inject.mbeanserver&#10;-Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN&#10;-Dorg.osgi.framework.startlevel.beginning=1&#10;-Dorg.osgi.framework.system.packages.extra=sun.misc&#10;-Dorg.osgi.service.http.port=9090&#10;-Dosgi.noShutdown=true&#10;-Dfile.encoding=UTF-8&#10;-Xmx800M"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:navajo.example/navajo}"/>
 <stringAttribute key="pde.version" value="3.3"/>
+<setAttribute key="selected_target_bundles">
+<setEntry value="bcpg@default:default"/>
+<setEntry value="bcpkix@default:default"/>
+<setEntry value="bcprov@default:default"/>
+<setEntry value="com.dexels.hazelcast@default:default"/>
+<setEntry value="com.dexels.immutable.api@default:default"/>
+<setEntry value="com.dexels.immutable.impl@default:default"/>
+<setEntry value="com.dexels.kafka.impl.rx2@default:default"/>
+<setEntry value="com.dexels.oauth.api@default:default"/>
+<setEntry value="com.dexels.oauth.impl@default:default"/>
+<setEntry value="com.dexels.oauth.web@default:default"/>
+<setEntry value="com.dexels.pubsub.rx2.api@default:default"/>
+<setEntry value="com.dexels.replication.api@default:default"/>
+<setEntry value="com.dexels.replication.impl.json@default:default"/>
+<setEntry value="com.dexels.replication.impl.protobuf@default:default"/>
+<setEntry value="com.dexels.replication.impl@default:default"/>
+<setEntry value="com.dexels.repository.api@default:default"/>
+<setEntry value="com.dexels.repository.file@default:default"/>
+<setEntry value="com.dexels.resourcebundle*2.0.2.201610130917@default:default"/>
+<setEntry value="com.dexels.resourcebundle*2.0.3@default:default"/>
+<setEntry value="com.dexels.server.mgmt.api@default:default"/>
+<setEntry value="com.dexels.server.mgmt.impl@default:default"/>
+<setEntry value="com.fasterxml.aalto-xml@default:default"/>
+<setEntry value="com.fasterxml.jackson.core.jackson-annotations@default:default"/>
+<setEntry value="com.fasterxml.jackson.core.jackson-core@default:default"/>
+<setEntry value="com.fasterxml.jackson.core.jackson-databind@default:default"/>
+<setEntry value="com.google.guava@default:default"/>
+<setEntry value="com.google.protobuf@default:default"/>
+<setEntry value="com.googlecode.javaewah.JavaEWAH@default:default"/>
+<setEntry value="com.hazelcast@default:default"/>
+<setEntry value="com.ibm.icu@default:default"/>
+<setEntry value="com.microsoft.sqlserver.mssql-jdbc@default:default"/>
+<setEntry value="com.mysql.jdbc@default:default"/>
+<setEntry value="com.nimbusds.nimbus-jose-jwt@default:default"/>
+<setEntry value="com.oracle.jdbc.driver@default:default"/>
+<setEntry value="com.sun.activation.javax.activation@default:default"/>
+<setEntry value="com.sun.mail.javax.mail@default:default"/>
+<setEntry value="io.reactivex.rxjava2.rxjava@default:default"/>
+<setEntry value="javax.annotation-api@default:default"/>
+<setEntry value="javax.el-api@default:default"/>
+<setEntry value="javax.enterprise.cdi-api@default:default"/>
+<setEntry value="javax.interceptor-api@default:default"/>
+<setEntry value="javax.servlet-api@default:default"/>
+<setEntry value="javax.transaction-api@default:default"/>
+<setEntry value="javax.xml.soap-api@default:default"/>
+<setEntry value="jaxb-api@default:default"/>
+<setEntry value="json@default:default"/>
+<setEntry value="lz4-java@default:default"/>
+<setEntry value="net.minidev.accessors-smart@default:default"/>
+<setEntry value="net.minidev.json-smart@default:default"/>
+<setEntry value="org.apache.aries.spifly.dynamic.bundle@default:default"/>
+<setEntry value="org.apache.aries.util@default:default"/>
+<setEntry value="org.apache.commons.codec@default:default"/>
+<setEntry value="org.apache.commons.commons-compress@default:default"/>
+<setEntry value="org.apache.commons.dbcp@default:default"/>
+<setEntry value="org.apache.commons.email@default:default"/>
+<setEntry value="org.apache.commons.fileupload@default:default"/>
+<setEntry value="org.apache.commons.io@default:default"/>
+<setEntry value="org.apache.commons.lang3@default:default"/>
+<setEntry value="org.apache.commons.lang@default:default"/>
+<setEntry value="org.apache.commons.logging@default:default"/>
+<setEntry value="org.apache.commons.net@default:default"/>
+<setEntry value="org.apache.commons.pool@default:default"/>
+<setEntry value="org.apache.felix.configadmin@default:default"/>
+<setEntry value="org.apache.felix.eventadmin@default:default"/>
+<setEntry value="org.apache.felix.fileinstall@default:default"/>
+<setEntry value="org.apache.felix.gogo.command@default:default"/>
+<setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+<setEntry value="org.apache.felix.gogo.shell@default:default"/>
+<setEntry value="org.apache.felix.inventory@default:default"/>
+<setEntry value="org.apache.felix.metatype@default:default"/>
+<setEntry value="org.apache.felix.scr*2.1.18@1:true"/>
+<setEntry value="org.apache.felix.webconsole.plugins.ds@default:default"/>
+<setEntry value="org.apache.felix.webconsole.plugins.event@default:default"/>
+<setEntry value="org.apache.felix.webconsole@default:default"/>
+<setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
+<setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
+<setEntry value="org.apache.pdfbox.fontbox@default:default"/>
+<setEntry value="org.apache.pdfbox.jempbox@default:default"/>
+<setEntry value="org.apache.pdfbox@default:default"/>
+<setEntry value="org.apache.servicemix.bundles.javax-inject@default:default"/>
+<setEntry value="org.apache.servicemix.bundles.jcip-annotations@default:default"/>
+<setEntry value="org.apache.servicemix.bundles.jsch@default:default"/>
+<setEntry value="org.apache.servicemix.bundles.jzlib@default:default"/>
+<setEntry value="org.apache.xbean.bundleutils@default:default"/>
+<setEntry value="org.apache.xbean.finder@default:default"/>
+<setEntry value="org.eclipse.jetty.client@default:default"/>
+<setEntry value="org.eclipse.jetty.continuation*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.http*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.io*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.proxy@default:default"/>
+<setEntry value="org.eclipse.jetty.reactive.client@default:default"/>
+<setEntry value="org.eclipse.jetty.security*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.server*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.servlet*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.servlets@default:default"/>
+<setEntry value="org.eclipse.jetty.util*9.4.22.v20191022@default:default"/>
+<setEntry value="org.eclipse.jetty.websocket.api@default:default"/>
+<setEntry value="org.eclipse.jetty.websocket.client@default:default"/>
+<setEntry value="org.eclipse.jetty.websocket.common@default:default"/>
+<setEntry value="org.eclipse.jetty.websocket.server@default:default"/>
+<setEntry value="org.eclipse.jetty.websocket.servlet@default:default"/>
+<setEntry value="org.eclipse.jetty.xml@default:default"/>
+<setEntry value="org.eclipse.osgi.services@default:default"/>
+<setEntry value="org.eclipse.osgi.util@default:default"/>
+<setEntry value="org.eclipse.osgi@-1:true"/>
+<setEntry value="org.mongodb.bson@default:default"/>
+<setEntry value="org.mongodb.driver-async@default:default"/>
+<setEntry value="org.mongodb.driver-reactivestreams@default:default"/>
+<setEntry value="org.mongodb.mongo-java-driver@default:default"/>
+<setEntry value="org.objectweb.asm.all@default:default"/>
+<setEntry value="org.objectweb.asm.commons@default:default"/>
+<setEntry value="org.objectweb.asm.tree@default:default"/>
+<setEntry value="org.objectweb.asm@default:default"/>
+<setEntry value="org.ops4j.pax.logging.pax-logging-api@1:default"/>
+<setEntry value="org.ops4j.pax.logging.pax-logging-service@1:default"/>
+<setEntry value="org.ops4j.pax.web.pax-web-api@default:default"/>
+<setEntry value="org.ops4j.pax.web.pax-web-extender-whiteboard@default:default"/>
+<setEntry value="org.ops4j.pax.web.pax-web-jetty@default:default"/>
+<setEntry value="org.ops4j.pax.web.pax-web-runtime@default:default"/>
+<setEntry value="org.ops4j.pax.web.pax-web-spi@default:default"/>
+<setEntry value="org.osgi.service.jdbc@default:default"/>
+<setEntry value="org.postgresql.jdbc42@default:default"/>
+<setEntry value="org.reactivestreams.reactive-streams@default:default"/>
+<setEntry value="org.scala-lang.scala-compiler@default:default"/>
+<setEntry value="org.scala-lang.scala-library@default:default"/>
+<setEntry value="org.scala-lang.scala-reflect@default:default"/>
+<setEntry value="stax2-api@default:default"/>
+</setAttribute>
+<setAttribute key="selected_workspace_bundles">
+<setEntry value="com.dexels.config.runtime@default:default"/>
+<setEntry value="com.dexels.navajo.adapters.binarystore@default:default"/>
+<setEntry value="com.dexels.navajo.adapters.resource@default:default"/>
+<setEntry value="com.dexels.navajo.adapters.stream@default:default"/>
+<setEntry value="com.dexels.navajo.adapters@default:default"/>
+<setEntry value="com.dexels.navajo.api@default:default"/>
+<setEntry value="com.dexels.navajo.article@default:default"/>
+<setEntry value="com.dexels.navajo.authentication.api@default:default"/>
+<setEntry value="com.dexels.navajo.birt.push@default:default"/>
+<setEntry value="com.dexels.navajo.client.async@default:default"/>
+<setEntry value="com.dexels.navajo.client.impl.javanet@default:default"/>
+<setEntry value="com.dexels.navajo.client.nql@default:default"/>
+<setEntry value="com.dexels.navajo.client.stream@default:default"/>
+<setEntry value="com.dexels.navajo.client@default:default"/>
+<setEntry value="com.dexels.navajo.compiler.tsl@default:default"/>
+<setEntry value="com.dexels.navajo.core@default:default"/>
+<setEntry value="com.dexels.navajo.dev.console@default:default"/>
+<setEntry value="com.dexels.navajo.document.json@default:default"/>
+<setEntry value="com.dexels.navajo.document.stream@default:default"/>
+<setEntry value="com.dexels.navajo.document@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.adapters@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.dbreplication.web@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.dbreplication@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.firebase@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.hazelcast@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.listeners@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.monitor@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.oauth.mongodb@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.pubsub@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise.soap@default:default"/>
+<setEntry value="com.dexels.navajo.enterprise@default:default"/>
+<setEntry value="com.dexels.navajo.entity@default:default"/>
+<setEntry value="com.dexels.navajo.function.pdf@default:default"/>
+<setEntry value="com.dexels.navajo.function@default:default"/>
+<setEntry value="com.dexels.navajo.instance.factory@default:default"/>
+<setEntry value="com.dexels.navajo.listeners.continuations@default:default"/>
+<setEntry value="com.dexels.navajo.listeners.external@default:default"/>
+<setEntry value="com.dexels.navajo.listeners.stream@default:default"/>
+<setEntry value="com.dexels.navajo.listeners@default:default"/>
+<setEntry value="com.dexels.navajo.mgmt@default:default"/>
+<setEntry value="com.dexels.navajo.mongo.accessstore@default:default"/>
+<setEntry value="com.dexels.navajo.mongo.stream@default:default"/>
+<setEntry value="com.dexels.navajo.mongo@default:default"/>
+<setEntry value="com.dexels.navajo.osgi.console@default:default"/>
+<setEntry value="com.dexels.navajo.queuemanager@default:default"/>
+<setEntry value="com.dexels.navajo.reactive.subscriber@default:default"/>
+<setEntry value="com.dexels.navajo.reactive@default:default"/>
+<setEntry value="com.dexels.navajo.resource.binarystore@default:default"/>
+<setEntry value="com.dexels.navajo.resource.http@default:default"/>
+<setEntry value="com.dexels.navajo.resource.jdbc.mysql@default:default"/>
+<setEntry value="com.dexels.navajo.resource.jdbc.oracle@default:default"/>
+<setEntry value="com.dexels.navajo.resource.jdbc.postgresql@default:default"/>
+<setEntry value="com.dexels.navajo.resource.mail@default:default"/>
+<setEntry value="com.dexels.navajo.resource.sftp@default:default"/>
+<setEntry value="com.dexels.navajo.resource@default:default"/>
+<setEntry value="com.dexels.navajo.scala.navajoscala@default:default"/>
+<setEntry value="com.dexels.navajo.scala.scriptcompiler@default:default"/>
+<setEntry value="com.dexels.navajo.tester.js@default:default"/>
+<setEntry value="com.dexels.navajo.twitter@default:default"/>
+<setEntry value="com.dexels.navajo.utilities@default:default"/>
+<setEntry value="com.dexels.navajo.version@default:default"/>
+<setEntry value="com.dexels.navajo.webconsole.branding@default:false"/>
+</setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
-<stringAttribute key="target_bundles" value="bcpg@default:default,bcpkix@default:default,bcprov@default:default,com.dexels.hazelcast@default:default,com.dexels.immutable.api@default:default,com.dexels.immutable.impl@default:default,com.dexels.kafka.impl.rx2@default:default,com.dexels.oauth.api@default:default,com.dexels.oauth.impl@default:default,com.dexels.oauth.web@default:default,com.dexels.pubsub.rx2.api@default:default,com.dexels.replication.api@default:default,com.dexels.replication.impl.json@default:default,com.dexels.replication.impl.protobuf@default:default,com.dexels.replication.impl@default:default,com.dexels.repository.api@default:default,com.dexels.repository.file@default:default,com.dexels.resourcebundle*2.0.2.201610130917@default:default,com.dexels.resourcebundle*2.0.3@default:default,com.dexels.server.mgmt.api@default:default,com.dexels.server.mgmt.impl@default:default,com.fasterxml.aalto-xml@default:default,com.fasterxml.jackson.core.jackson-annotations@default:default,com.fasterxml.jackson.core.jackson-core@default:default,com.fasterxml.jackson.core.jackson-databind@default:default,com.google.guava@default:default,com.google.protobuf@default:default,com.googlecode.javaewah.JavaEWAH@default:default,com.hazelcast@default:default,com.ibm.icu@default:default,com.microsoft.sqlserver.mssql-jdbc@default:default,com.mysql.jdbc@default:default,com.nimbusds.nimbus-jose-jwt@default:default,com.oracle.jdbc.driver@default:default,com.sun.activation.javax.activation@default:default,com.sun.mail.javax.mail@default:default,io.reactivex.rxjava2.rxjava@default:default,javax.annotation-api@default:default,javax.el-api@default:default,javax.enterprise.cdi-api@default:default,javax.interceptor-api@default:default,javax.servlet-api@default:default,javax.transaction-api@default:default,javax.xml.soap-api@default:default,jaxb-api@default:default,json@default:default,lz4-java@default:default,net.minidev.accessors-smart@default:default,net.minidev.json-smart@default:default,org.apache.aries.spifly.dynamic.bundle@default:default,org.apache.aries.util@default:default,org.apache.commons.codec@default:default,org.apache.commons.commons-compress@default:default,org.apache.commons.dbcp@default:default,org.apache.commons.email@default:default,org.apache.commons.fileupload@default:default,org.apache.commons.io@default:default,org.apache.commons.lang3@default:default,org.apache.commons.lang@default:default,org.apache.commons.logging@default:default,org.apache.commons.net@default:default,org.apache.commons.pool@default:default,org.apache.felix.configadmin@default:default,org.apache.felix.eventadmin@default:default,org.apache.felix.fileinstall@default:default,org.apache.felix.gogo.command@default:default,org.apache.felix.gogo.runtime@default:default,org.apache.felix.gogo.shell@default:default,org.apache.felix.inventory@default:default,org.apache.felix.metatype@default:default,org.apache.felix.scr*2.1.18@1:true,org.apache.felix.webconsole.plugins.ds@default:default,org.apache.felix.webconsole.plugins.event@default:default,org.apache.felix.webconsole@default:default,org.apache.httpcomponents.httpclient@default:default,org.apache.httpcomponents.httpcore@default:default,org.apache.pdfbox.fontbox@default:default,org.apache.pdfbox.jempbox@default:default,org.apache.pdfbox@default:default,org.apache.servicemix.bundles.javax-inject@default:default,org.apache.servicemix.bundles.jcip-annotations@default:default,org.apache.servicemix.bundles.jsch@default:default,org.apache.servicemix.bundles.jzlib@default:default,org.apache.xbean.bundleutils@default:default,org.apache.xbean.finder@default:default,org.eclipse.jetty.client@default:default,org.eclipse.jetty.continuation*9.4.22.v20191022@default:default,org.eclipse.jetty.http*9.4.22.v20191022@default:default,org.eclipse.jetty.io*9.4.22.v20191022@default:default,org.eclipse.jetty.proxy@default:default,org.eclipse.jetty.reactive.client@default:default,org.eclipse.jetty.security*9.4.22.v20191022@default:default,org.eclipse.jetty.server*9.4.22.v20191022@default:default,org.eclipse.jetty.servlet*9.4.22.v20191022@default:default,org.eclipse.jetty.servlets@default:default,org.eclipse.jetty.util*9.4.22.v20191022@default:default,org.eclipse.jetty.websocket.api@default:default,org.eclipse.jetty.websocket.client@default:default,org.eclipse.jetty.websocket.common@default:default,org.eclipse.jetty.websocket.server@default:default,org.eclipse.jetty.websocket.servlet@default:default,org.eclipse.jetty.xml@default:default,org.eclipse.osgi.services@default:default,org.eclipse.osgi.util@default:default,org.eclipse.osgi@-1:true,org.mongodb.bson@default:default,org.mongodb.driver-async@default:default,org.mongodb.driver-reactivestreams@default:default,org.mongodb.mongo-java-driver@default:default,org.objectweb.asm.all@default:default,org.objectweb.asm.commons@default:default,org.objectweb.asm.tree@default:default,org.objectweb.asm@default:default,org.ops4j.pax.logging.pax-logging-api@default:default,org.ops4j.pax.logging.pax-logging-service@default:default,org.ops4j.pax.web.pax-web-api@default:default,org.ops4j.pax.web.pax-web-extender-whiteboard@default:default,org.ops4j.pax.web.pax-web-jetty@default:default,org.ops4j.pax.web.pax-web-runtime@default:default,org.ops4j.pax.web.pax-web-spi@default:default,org.osgi.service.jdbc@default:default,org.postgresql.jdbc42@default:default,org.reactivestreams.reactive-streams@default:default,org.scala-lang.scala-compiler@default:default,org.scala-lang.scala-library@default:default,org.scala-lang.scala-reflect@default:default,stax2-api@default:default"/>
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<stringAttribute key="workspace_bundles" value="com.dexels.config.runtime@default:default,com.dexels.navajo.adapters.binarystore@default:default,com.dexels.navajo.adapters.resource@default:default,com.dexels.navajo.adapters.stream@default:default,com.dexels.navajo.adapters@default:default,com.dexels.navajo.api@default:default,com.dexels.navajo.article@default:default,com.dexels.navajo.authentication.api@default:default,com.dexels.navajo.birt.push@default:default,com.dexels.navajo.client.async@default:default,com.dexels.navajo.client.impl.javanet@default:default,com.dexels.navajo.client.nql@default:default,com.dexels.navajo.client.stream@default:default,com.dexels.navajo.client@default:default,com.dexels.navajo.compiler.tsl@default:default,com.dexels.navajo.core@default:default,com.dexels.navajo.dev.console@default:default,com.dexels.navajo.document.json@default:default,com.dexels.navajo.document.stream@default:default,com.dexels.navajo.document@default:default,com.dexels.navajo.enterprise.adapters@default:default,com.dexels.navajo.enterprise.dbreplication.web@default:default,com.dexels.navajo.enterprise.dbreplication@default:default,com.dexels.navajo.enterprise.firebase@default:default,com.dexels.navajo.enterprise.hazelcast@default:default,com.dexels.navajo.enterprise.listeners@default:default,com.dexels.navajo.enterprise.monitor@default:default,com.dexels.navajo.enterprise.oauth.mongodb@default:default,com.dexels.navajo.enterprise.pubsub@default:default,com.dexels.navajo.enterprise.soap@default:default,com.dexels.navajo.enterprise@default:default,com.dexels.navajo.entity@default:default,com.dexels.navajo.function.pdf@default:default,com.dexels.navajo.function@default:default,com.dexels.navajo.instance.factory@default:default,com.dexels.navajo.listeners.continuations@default:default,com.dexels.navajo.listeners.external@default:default,com.dexels.navajo.listeners.stream@default:default,com.dexels.navajo.listeners@default:default,com.dexels.navajo.mgmt@default:default,com.dexels.navajo.mongo.accessstore@default:default,com.dexels.navajo.mongo.stream@default:default,com.dexels.navajo.mongo@default:default,com.dexels.navajo.osgi.console@default:default,com.dexels.navajo.queuemanager@default:default,com.dexels.navajo.reactive.subscriber@default:default,com.dexels.navajo.reactive@default:default,com.dexels.navajo.resource.binarystore@default:default,com.dexels.navajo.resource.http@default:default,com.dexels.navajo.resource.jdbc.mysql@default:default,com.dexels.navajo.resource.jdbc.oracle@default:default,com.dexels.navajo.resource.jdbc.postgresql@default:default,com.dexels.navajo.resource.mail@default:default,com.dexels.navajo.resource.sftp@default:default,com.dexels.navajo.resource@default:default,com.dexels.navajo.scala.navajoscala@default:default,com.dexels.navajo.scala.scriptcompiler@default:default,com.dexels.navajo.tester.js@default:default,com.dexels.navajo.twitter@default:default,com.dexels.navajo.utilities@default:default,com.dexels.navajo.version@default:default,com.dexels.navajo.webconsole.branding@default:false"/>
 </launchConfiguration>
