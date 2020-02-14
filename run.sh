@@ -8,7 +8,7 @@
 script=$(basename $0)
 
 
-function usage() {
+usage () {
 
     if [ -n "$1" ] ; then
         exec >&2
@@ -29,7 +29,7 @@ function usage() {
 }
 
 
-function parse_options() {
+parse_options () {
     
     with_kafka="set"
     
