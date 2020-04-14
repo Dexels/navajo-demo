@@ -88,9 +88,15 @@ https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html
 
 (You can check with cluster are running using 'docker-compose ps', or check 'docker ps' for individual containers)
 
+
+### Connecting to the MongoDB database
+
+Open a connection to localhost:27017 using your favorite mongodb access tool (*e.g.*, MongoDB Compass or Robo 3T).
+
+
 ### Connecting to the Postgres database
 
-Open a connection to localhost:5432 using your favorite database access tool (e.g. DbVisualizer)
+Open a connection to localhost:5432 using your favorite database access tool (*e.g.*, DbVisualizer)
 
 Username: postgres 
 
