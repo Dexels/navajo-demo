@@ -1,12 +1,13 @@
-Small demo-setup for a container based Navajo instance.
+## Small demo-setup for a container-based Navajo instance ##
+
 This setup will start three containers:
-
 - An empty mongodb instance
-- A Postgres database with some fake movie data
-- A navajo container pointing to the database
-- The navajo container has a few scripts that access that data
+- A postgres database with some fake movie data
+- A navajo container pointing to the two databases
 
-Using this demo:
+The Navajo container has a few scripts that access the data in the databases.
+
+### Using this demo ###
 
 Clone this repository:
 
@@ -44,14 +45,15 @@ services:
      - FILE_REPOSITORY_DEPLOYMENT=develop
 ```
 
-It defines two containers, one called postgres and one called navajo. The postgres container exposes the standard postgres port at 5432, and navajo
-exposes port 8181.
+It defines three containers, called "mongodemo", "postgres", and "navajo". The mongodemo container exposes the standard
+mongodb port at 27017, the postgres container the standard postgres port at 5432, and navajo container exposes an HTTP
+port at 8181.
 
 ```
 %> docker-compose up
 ```
 
-Will start both containers and after a while both should be up.
+Will start all three containers, and after a while they should all be up.
 
 then open a browse to:
 http://localhost:8181/tester.html
