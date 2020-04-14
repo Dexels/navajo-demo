@@ -20,14 +20,20 @@ We use docker-compose here, a simple piece of configuration that allows us to st
 Take a look at the docker compose file:
 
 ```
-�version: '2'
+version: '3'
 services:
+  mongodemo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
   postgres:
     image: dexels/dvdrental:1.0.7
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+
   navajo:
     image: dexels/navajo-demo:1
     ports:
