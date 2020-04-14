@@ -24,6 +24,8 @@ services:
      - INSTANCENAME=instance-1
      - LOGAPPENDERS=out,stdout
      - NAVAJO_REQUEST_TIMEOUT=5000
+     - NO_DBREPLICATION=true
+     - NO_DBTRIGGER=true
      - TENANT_MASTER=Tenant1
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8181/status || exit 1"]
