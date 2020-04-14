@@ -12,7 +12,7 @@ The Navajo container has a few scripts that access the data in the databases.
 Clone this repository:
 
 ```
-git clone https://github.com/Dexels/navajo.example.git
+%> git clone https://github.com/Dexels/navajo.example.git
 ```
 
 This will clone a simple navajo project along with some docker configuration files.
@@ -102,19 +102,19 @@ Username: postgres
 
 Password: mysecretpassword
 
-### Editing / rebuilding.
+### Editing / rebuilding
 
 Try editing / adding scripts in navajo/scripts.
 Then rebuild:
 
 ```
-docker-compose build
+%> docker-compose build
 ```
 
 And bring it back up:
 
 ```
-docker-compose up
+%> docker-compose up
 ```
 
 For more about docker / docker-compose, there is very nice documentation available at
