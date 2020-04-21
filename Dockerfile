@@ -1,4 +1,4 @@
-ARG VERSION=0.0.0
+ARG VERSION=3.3.947
 FROM dexels/navajo-container:${VERSION}
 
 MAINTAINER Frank Lyaruu

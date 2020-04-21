@@ -8,11 +8,16 @@ services:
     environment:
       POSTGRES_PASSWORD: mysecretpassword
 
+  mongodemo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
   navajo:
     build:
       context: .
       args:
-        VERSION: ${VERSION}
+        VERSION: 3.3.947
     ports:
       - "8181:8181"
     environment:
@@ -32,9 +37,4 @@ services:
       interval: 1m00s
       timeout: 10s
       retries: 3
-
-  mongodemo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
 
