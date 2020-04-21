@@ -52,7 +52,7 @@ It defines three containers, called "mongodemo", "postgres", and "navajo". The m
 container exposes the standard mongodb port at 27017, the postgres container the standard
 postgres port at 5432, and navajo container exposes an HTTP port at 8181.
 
-The docker command
+The docker compoose command
 
 ```
 %> docker-compose up
@@ -66,14 +66,8 @@ http://localhost:8181/tester.html
 ```
 
 When prompted use:
-- username: admin
-- password: admin
-
-In the tester you can login with any username / password (disregard the login system, keep it
-on 'Oracle' for now, it does not matter for now)
-
-- Select Tenant1.
-- Click Login
+- Username: admin
+- Password: admin
 
 Now you can call Navajo scripts by clicking on the script tree on the left. For example,
 open "movie/ActorList". That will open a script that queries a list of fake films.
