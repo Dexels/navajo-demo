@@ -1,33 +1,30 @@
 ## Small demo-setup for a container-based Navajo instance ##
 
 This setup will start three containers:
-- An empty mongodb instance
 - A postgres database with some fake movie data
+- An empty mongodb instance
 - A navajo container pointing to the two databases
 
-The Navajo container has a few scripts that access the data in the databases.
+The Navajo container has a few scripts that implement webservices to access the data
+in the databases.
 
 ### Using this demo ###
 
-Clone this repository:
+To use this demo, clone this repository:
 
 ```
 %> git clone https://github.com/Dexels/navajo.example.git
 ```
 
-This will clone a simple navajo project along with some docker configuration files. We use
-docker-compose here, a simple piece of configuration that allows us to start multiple
+This will clone a simple navajo project along with some docker configuration files. It uses
+docker-compose, a simple piece of configuration that allows us to start multiple docker
 containers at once:
 
-Take a look at the docker compose file:
+The docker compose file looks as follows:
 
 ```
 version: '3'
 services:
-  mongodemo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
 
   postgres:
     image: dexels/dvdrental:1.0.7
@@ -35,6 +32,11 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+
+  mongodemo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
 
   navajo:
     image: dexels/navajo-demo:1
@@ -50,37 +52,36 @@ It defines three containers, called "mongodemo", "postgres", and "navajo". The m
 container exposes the standard mongodb port at 27017, the postgres container the standard
 postgres port at 5432, and navajo container exposes an HTTP port at 8181.
 
+The docker compoose command
+
 ```
 %> docker-compose up
 ```
 
-Will start all three containers, and after a while they should all be up. Then open a
-web browser with the following URL.
+starts all three containers, and after a while they should all be up and running. You can then
+use a navajo tester webpage in a browser, using the following URL.
 
 ```
 http://localhost:8181/tester.html
 ```
 
-And when prompted use:
-- username: admin
-- password: admin
+When prompted use:
+- Username: admin
+- Password: admin
 
-In the tester login with any username / password (disregard the login system, keep it
-on 'Oracle' for now, it does not matter for now)
-
-- Select Tenant1.
-- Click Login
-
-Now we can call Navajo scripts by clicking on the script tree on the left. For example,
+Now you can call Navajo scripts by clicking on the script tree on the left. For example,
 open "movie/ActorList". That will open a script that queries a list of fake films.
 
-Entities are special kind API that can be accessed at
+Entities are special kind of webservice provided by navajo that can be accessed using
+a REST interface. Entities can be examined at
 
 ```
 http://localhost:8181/entityDocumentation/movie
 ```
 
-Additionally, you can inspect the OSGi web console. The web console can be found at
+using a separate tester webpage.
+
+Additionally, you can inspect the navajo system using OSGi web console. The web console can be found at
 
 ```
 http://localhost:8181/system/console/bundles
@@ -104,6 +105,12 @@ is of this class path issue.
 For more in-depth information on how to use the OSGi web console I refer to the Felix project:
 
 https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html
+
+Statistics on the invocations of the webservices can be found at a monitoring webpage at
+
+```
+http://localhost:8181/Monitor/index.html
+```
 
 
 ### Shutting down
