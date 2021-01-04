@@ -13,7 +13,7 @@ in the databases.
 To use this demo, clone this repository:
 
 ```
-%> git clone https://github.com/Dexels/navajo.example.git
+%> git clone https://github.com/Dexels/navajo-demo.git
 ```
 
 This will clone a simple navajo project along with some docker configuration files. It uses
