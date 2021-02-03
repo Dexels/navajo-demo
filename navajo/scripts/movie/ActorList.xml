@@ -11,13 +11,13 @@
 			<message name="Actor" type="array">
 				<sqlquery.resultSet>
 					<property name="Id" type="integer" direction="out" description="Internal actor identifier">
-						<expression value="$columnValue('actor_id')" />
+						<expression value="$columnValue('actor_id')"/>
 					</property>
 					<property name="FirstName" type="string" direction="out" description="First name">
-						<expression value="$columnValue('first_name')" />
+						<expression value="$columnValue('first_name')"/>
 					</property>
 					<property name="LastName" type="string" direction="out" description="Last name">
-						<expression value="$columnValue('last_name')" />
+						<expression value="$columnValue('last_name')"/>
 					</property>
 				</sqlquery.resultSet>
 			</message>

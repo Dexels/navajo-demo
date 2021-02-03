@@ -7,27 +7,28 @@
             FROM film
             WHERE film_id = ?
         </sqlquery.query>
-        <sqlquery.addParameter value="ToInteger([/Film/Id])" />
+        <sqlquery.addParameter value="ToInteger([/Film/Id])"/>
 
         <message name="Film">
             <property name="Id" type="integer" direction="out" description="Internal film identifier">
-                <expression value="$columnValue('film_id')" />
+                <expression value="$columnValue('film_id')"/>
             </property>
             <property name="Title" type="string" direction="in" description="Full title">
-                <expression value="$columnValue('title')" />
+                <expression value="$columnValue('title')"/>
             </property>
             <property name="ReleaseYear" type="integer" direction="in" description="Year of first release">
-                <expression value="$columnValue('release_year')" />
+                <expression value="$columnValue('release_year')"/>
             </property>
             <property name="Description" type="string" direction="in" description="Short description">
-                <expression value="$columnValue('description')" />
+                <expression value="$columnValue('description')"/>
             </property>
         </message>
     </map.sqlquery>
 
     <methods>
-        <method name="movie/DeleteFilm" />
-        <method name="movie/UpdateFilm" />
+        <method name="movie/InitFilm"/>
+        <method name="movie/UpdateFilm"/>
+        <method name="movie/DeleteFilm"/>
     </methods>
 
 </navascript>

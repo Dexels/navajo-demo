@@ -10,32 +10,33 @@
                 last_update = NOW()
             WHERE film_id = ?;
         </sqlquery.update>
-        <sqlquery.addParameter value="[/Film/Title]" />
-        <sqlquery.addParameter value="ToInteger([/Film/ReleaseYear])" />
-        <sqlquery.addParameter value="[/Film/Description]" />
-        <sqlquery.addParameter value="ToInteger([/Film/Id])" />
+        <sqlquery.addParameter value="[/Film/Title]"/>
+        <sqlquery.addParameter value="ToInteger([/Film/ReleaseYear])"/>
+        <sqlquery.addParameter value="[/Film/Description]"/>
+        <sqlquery.addParameter value="ToInteger([/Film/Id])"/>
         <sqlquery.doUpdate/>
 
         <message name="Film">
             <property name="Id" type="integer" direction="out" description="Internal film identifier">
-                <expression value="[/Film/Id]" />
+                <expression value="[/Film/Id]"/>
             </property>
             <property name="Title" type="string" direction="in" description="Full title">
-                <expression value="[/Film/Title]" />
+                <expression value="[/Film/Title]"/>
             </property>
             <property name="ReleaseYear" type="integer" direction="in" description="Year of first release">
-                <expression value="[/Film/ReleaseYear]" />
+                <expression value="[/Film/ReleaseYear]"/>
             </property>
             <property name="Description" type="string" direction="in" description="Short description">
-                <expression value="[/Film/Description]" />
+                <expression value="[/Film/Description]"/>
             </property>
         </message>
     </map.sqlquery>
 
     <methods>
-        <method name="movie/Film" />
-        <method name="movie/DeleteFilm" />
+        <method name="movie/InitFilm"/>
+        <method name="movie/Film"/>
         <method name="movie/UpdateFilm"/>
+        <method name="movie/DeleteFilm"/>
     </methods>
 
 </navascript>

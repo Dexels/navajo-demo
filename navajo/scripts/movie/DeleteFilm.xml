@@ -2,7 +2,7 @@
 <navascript>
 
     <param name="FilmId" type="integer">
-        <expression value="ToInteger([/Film/Id])" />
+        <expression value="ToInteger([/Film/Id])"/>
     </param>
 
     <map.sqlquery datasource="'dvdrental'">       
@@ -33,22 +33,26 @@
                 DELETE FROM film
                 WHERE film_id = ?;
         </sqlquery.update>
-        <sqlquery.addParameter value="[@FilmId]" />
-        <sqlquery.addParameter value="[@FilmId]" />
-        <sqlquery.addParameter value="[@FilmId]" />
-        <sqlquery.addParameter value="[@FilmId]" />
-        <sqlquery.addParameter value="[@FilmId]" />
-        <sqlquery.addParameter value="[@FilmId]" />
+        <sqlquery.addParameter value="[@FilmId]"/>
+        <sqlquery.addParameter value="[@FilmId]"/>
+        <sqlquery.addParameter value="[@FilmId]"/>
+        <sqlquery.addParameter value="[@FilmId]"/>
+        <sqlquery.addParameter value="[@FilmId]"/>
+        <sqlquery.addParameter value="[@FilmId]"/>
         <sqlquery.doUpdate/>
 
-        <message name="Deleted">
+        <message name="Film">
             <property name="Id" type="integer" direction="out" description="Internal film identifier">
-                <expression value="[@FilmId]" />
+                <expression value="[@FilmId]"/>
             </property>
-            <property name="Count" type="integer" direction="out" description="Number of rows deleted">
-                <expression value="$updateCount" />
+            <property name="DeleteCount" type="integer" direction="out" description="Number of rows deleted">
+                <expression value="$updateCount"/>
             </property>
         </message>
     </map.sqlquery>
+
+    <methods>
+        <method name="movie/InitFilm"/>
+    </methods>
 
 </navascript>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navascript debug="true">
 
     <message name="FilmList">
@@ -10,16 +11,16 @@
             <message name="Film" type="array">
                 <sqlquery.resultSet>
                     <property name="Id" type="integer" direction="out" description="Internal film identifier">
-                        <expression value="$columnValue('film_id')" />
+                        <expression value="$columnValue('film_id')"/>
                     </property>
                     <property name="Title" type="string" direction="out" description="Full title">
-                        <expression value="$columnValue('title')" />
+                        <expression value="$columnValue('title')"/>
                     </property>
                     <property name="ReleaseYear" type="integer" direction="out" description="Year of first release">
-                        <expression value="$columnValue('release_year')" />
+                        <expression value="$columnValue('release_year')"/>
                     </property>                    
                     <property name="Description" type="string" direction="out" description="Short description">
-                        <expression value="$columnValue('description')" />
+                        <expression value="$columnValue('description')"/>
                     </property>
                 </sqlquery.resultSet>
             </message>

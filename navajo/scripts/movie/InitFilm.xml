@@ -2,12 +2,12 @@
 <navascript>
 
     <message name="Film">
-        <property name="Id" type="integer" direction="in" description="Internal film identifier" />
+        <property name="Id" type="integer" direction="in" description="Internal film identifier"/>
     </message>
 
     <methods>
-        <method name="movie/DeleteFilm" />
-        <method name="movie/Film" />
+        <method name="movie/DeleteFilm"/>
+        <method name="movie/Film"/>
     </methods>
 
 </navascript>

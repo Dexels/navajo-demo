@@ -16,14 +16,18 @@
         <sqlquery.addParameter value="[@ActorId]" />
         <sqlquery.doUpdate/>
 
-        <message name="Deleted">
+        <message name="Actor">
             <property name="Id" type="integer" direction="out" description="Internal actor identifier">
                 <expression value="[@ActorId]" />
             </property>
-            <property name="Count" type="integer" direction="out" description="Number of rows deleted">
+            <property name="DeleteCount" type="integer" direction="out" description="Number of rows deleted">
                 <expression value="$updateCount" />
             </property>
         </message>
     </map.sqlquery>
+
+    <methods>
+        <method name="movie/InitActor"/>
+    </methods>
 
 </navascript>

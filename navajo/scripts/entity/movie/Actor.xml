@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <navascript>
 
-	<operations>
-		<operation service="movie/Actor" method="GET" />
-		<operation service="movie/DeleteActor" method="DELETE" />
-		<operation service="movie/UpdateActor" method="PUT" />
-	</operations>
+    <operations>
+        <operation service="movie/Actor" method="GET" />
+        <operation service="movie/DeleteActor" method="DELETE" />
+        <operation service="movie/UpdateActor" method="PUT" />
+    </operations>
 
-	<message name="Actor">
-		<property name="Id" type="string" key="true,id=search" description="Internal actor identifier" />
-		<property name="FirstName" type="string" description="First name" />
-		<property name="LastName" type="string" description="Last name" />
-	</message>
+    <message name="Actor">
+        <property name="Id" type="string" key="true,id=search" description="Internal actor identifier" />
+        <property name="FirstName" type="string" description="First name" />
+        <property name="LastName" type="string" description="Last name" />
+        <property name="DeleteCount" type="integer" description="Number of rows deleted" />
+    </message>
 
 </navascript>

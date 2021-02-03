@@ -2,12 +2,12 @@
 <navascript>
 
     <message name="Actor">
-        <property name="Id" type="integer" direction="in" description="Internal actor identifier" />
+        <property name="Id" type="integer" direction="in" description="Internal actor identifier"/>
     </message>
 
     <methods>
-        <method name="movie/Actor" />
-        <method name="movie/DeleteActor" />
+        <method name="movie/Actor"/>
+        <method name="movie/DeleteActor"/>
     </methods>
 
 </navascript>
