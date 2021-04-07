@@ -1,8 +1,6 @@
 ARG VERSION=3.3.947
 FROM dexels/navajo-container:${VERSION}
 
-MAINTAINER Frank Lyaruu
-
 USER 431:433
 COPY --chown=431:433 navajo /storage/repositories/navajo/
 
